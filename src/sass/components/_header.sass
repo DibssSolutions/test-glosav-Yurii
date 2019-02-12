@@ -1,0 +1,139 @@
+header
+    font-family: 'GothamPro'
+.logo
+    display: block
+    &__img img
+        display: block
+
+.header-wrapper
+    display: flex
+    width: 100%
+    flex-direction: column-reverse
+.header-nav
+
+.menu
+    display: flex
+    justify-content: flex-end
+    &__item a
+        color: #396f8c
+        font-size: 14px
+        font-weight: 500
+        text-transform: uppercase
+        letter-spacing: 0.56px
+        text-decoration: none
+
+.menu__item
+    margin-right: 38px
+
+.menu__item:last-child
+    margin-right: 0
+
+.menu__item a:hover
+    color: #f58220
+
+.header-right
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    margin-bottom: 10px
+.lang
+    position: relative
+    color: #396f8c
+    font-size: 14px
+    font-weight: 400
+    letter-spacing: 0.28px
+
+.lang__current
+    border-bottom: 1px dotted #9ab5c6
+    display: block
+    line-height: 12px
+
+.lang-btn
+    display: flex
+    align-items: center
+    align-items: center
+    margin-left: 10px
+    width: 30px
+
+.arrow
+    margin-left: 2px
+.rotate
+    transform: rotate(180deg)
+
+.arrow
+    width: 0
+    height: 0
+    border: 5px solid transparent
+    border-top-color: #396f8c
+    opacity: 0.7
+    border-bottom: 0
+
+.arrow:hover
+    border-top-color: #f58220
+
+.lang-list
+    position: absolute
+    top: 100%
+    left: 0
+    display: none
+    flex-direction: column
+    align-items: flex-start
+    background-color: #eaeff2
+    &__item
+        padding: 10px
+        font-size: 14px
+
+.lang__link
+    text-decoration: none
+    color: #396f8c
+
+.lang__link:hover
+    color: #f58220
+
+.sign-in-btn
+    opacity: 0.8
+    color: #396f8c
+    font-size: 14px
+    font-weight: 400
+    letter-spacing: 0.7px
+
+.sign-in-btn:hover
+    color: #2e5b72
+    opacity: 1
+
+.header-right > div
+    margin-right: 40px
+.header-right >div:last-child
+    margin-right: 0
+
+.find-block
+    display: flex
+    position: relative
+
+.find-block__input
+    width: 250px
+    padding: 7px 27px 7px 4px
+    background-color: #cadae3
+
+.find-arrow
+    background-image: url(/img/find.png)
+    background-repeat: no-repeat
+    display: block
+
+
+.sprite-find 
+    width: 17px
+    height: 17px
+    background-position: -5px -5px
+    position: absolute
+    width: 17px
+    height: 17px
+    right: 7px
+    top: 50%
+    transform: translateY(-50%)
+
+.sprite-find:hover
+    background-position: -32px -5px
+
+.yura
+    display: none
