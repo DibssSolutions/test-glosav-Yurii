@@ -1,19 +1,28 @@
 header
     font-family: 'GothamPro'
+    height: 100vh
+
+.header
+    padding-top: 22px
+    // background-color: #464646
+    background: linear-gradient(to bottom, rgba(194,209,218,1) 0%,rgba(194,209,218,0.12) 52%,rgba(194,209,218,1) 100%)
 .logo
     display: block
     &__img img
         display: block
 
-.header-wrapper
+.header-inner
     display: flex
     width: 100%
-    flex-direction: column-reverse
-.header-nav
+    flex-direction: column
+
+.header-wrapper
+    margin-bottom: 20px
 
 .menu
     display: flex
     justify-content: flex-end
+    margin-left: 70px
     &__item a
         color: #396f8c
         font-size: 14px
@@ -36,6 +45,7 @@ header
     justify-content: flex-end
     align-items: center
     margin-bottom: 10px
+    margin-top: 5px
 .lang
     position: relative
     color: #396f8c
@@ -114,6 +124,9 @@ header
     width: 250px
     padding: 7px 27px 7px 4px
     background-color: #cadae3
+    position: absolute
+    left: -251px
+    top: -13px
 
 .find-arrow
     background-image: url(/img/find.png)
@@ -137,3 +150,98 @@ header
 
 .yura
     display: none
+
+.modal
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 1042px
+    height: 587px
+    max-width: 100%
+    max-height: 100%
+    z-index: 1010
+    display: none
+
+.modal-guts
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+.closed
+    display: flex
+
+.modal .close-button 
+    position: absolute
+    z-index: 1
+    top: 10px
+    top: 0px
+    right: -110px
+
+.range
+    display: flex
+    align-items: center
+    justify-content: center
+
+.range__input
+    -webkit-appearance: none
+    position: relative
+    height: 1px
+    width: 125px
+    background-color: transparent
+
+.range__input:before
+    content: url(../img/border-range.png)
+    position: absolute
+    right: 18px
+    top: -11px
+.range__input::after
+    content: url(../img/slide-range2.png)
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    right: 3px
+
+.range__input::-webkit-slider-thumb
+    -webkit-appearance: none
+    appearance: none
+    width: 38px
+    height: 38px
+    border: 0
+    background: url('../../img/slide-range.png')
+    cursor: pointer
+    position: relative
+    z-index: 1
+
+.range__text
+    padding: 0 10px
+    color: #396f8c
+    font-size: 12px
+    font-weight: 500
+    letter-spacing: 0.48px
+
+.close-button
+    background-image: url(../img/close-btn.png)
+    background-repeat: no-repeat
+    display: block
+    background-color: transparent
+
+.close-button:before
+    content: url(../img/close.svg)
+    position: absolute
+    transform: translate(-50%, -50%)
+    top: 50%
+    left: 50%
+
+.button-sprite
+    width: 64px
+    height: 64px
+    background-position: -5px -5px
+
+
+.button-sprite:hover
+    width: 64px
+    height: 64px
+    background-position: -79px -5px

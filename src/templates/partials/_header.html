@@ -1,10 +1,35 @@
 <!-- header block start -->
 <header class="header">
-  <div class="wrapper block">
+  <div class="header-wrapper wrapper block">
     <a href="#" class="logo">
       <div class="logo__img"><img src="img/logo.png" alt="logo" /></div>
     </a>
-    <div class="header-wrapper">
+    <div class="header-inner">
+      <div class="header-right">
+        <div class="find-block">
+          <form action="#" class="yura">
+            <div><input class="find-block__input" type="text" placeholder="Система слежения"></div>
+          </form>
+          <form action="#">
+            <div class="find-arrow sprite-find" href="#"></div>
+          </form>
+        </div>
+        <div><a class="sign-in-btn btn_white">Войти</a></div>
+        <div class="lang">
+          <div class="lang-btn">
+            <a class="lang__current">Ru</a>
+            <div class="arrow"></div>
+          </div>
+          <ul class="lang-list">
+            <li class="lang-list__item">
+              <a class="lang__link" href="#">Ua</a>
+            </li>
+            <li class="lang-list__item">
+              <a class="lang__link" href="#">En</a>
+            </li>
+          </ul>
+        </div>
+      </div>
       <nav class="header-nav">
         <ul class="menu">
           <li class="menu__item">
@@ -24,33 +49,31 @@
           </li>
         </ul>
       </nav>
-      <div class="header-right">
-        <div class="find-block">
-          <form action="#" class="yura">
-            <div><input class="find-block__input" type="text" placeholder="Система слежения"></div>
-          </form>
-          <form action="#">
-              <div class="find-arrow sprite-find" href="#"></div>
-          </form>
-        </div>
-
-        <div><a class="sign-in-btn btn_white">Войти</a></div>
-        <div class="lang">
-          <div class="lang-btn">
-            <a class="lang__current">Ru</a>
-            <div class="arrow"></div>
-          </div>
-          <ul class="lang-list">
-            <li class="lang-list__item">
-              <a class="lang__link" href="#">Ua</a>
-            </li>
-            <li class="lang-list__item">
-              <a class="lang__link" href="#">En</a>
-            </li>
-          </ul>
-        </div>
-      </div>
     </div>
   </div>
+  
+  <div class="range">
+      <span class="range__text">Потяните</span>
+      <input type="range" id="scrollVideo" class="range__input" value="0">
+      <span class="range__text">для просмотра</span>
+  </div>
+
+
+  <div class="modal" id="modal" aria-hidden="true" aria-labelledby="modalTitle" aria-describedby="modalDescription"
+    role="dialog">
+    <button class="close-button button-sprite" id="close-button"></button>
+    <div class="modal-guts" role="document">
+      <iframe width="1042" height="587" src="https://www.youtube.com/embed/1hoKQRRYOys" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="owl-carousel">
+      <div> Your Content </div>
+      <div> Your Content </div>
+      <div> Your Content </div>
+      <div> Your Content </div>
+      <div> Your Content </div>
+      <div> Your Content </div>
+      <div> Your Content </div>
+    </div>
 </header>
-<!-- end header block -->

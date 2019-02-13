@@ -23,3 +23,4 @@ $(document).on('click', function(hideLang) {
     // $('.yura').hide();
   }
 });
+
