@@ -4,16 +4,23 @@ let modal = document.querySelector('#modal'),
 
 closeButton.addEventListener('click', function() {
   modal.classList.toggle('closed');
+
 });
 
 const range = document.getElementById('scrollVideo');
 
 range.addEventListener('change', function(range) {
+
+
   const value = range.target.value;
-  const maxValue = 100; 
-  if(+value === maxValue) {
+  const maxValue = 100;
+  if (+value === maxValue) {
+    $('.slider-wrapper').fadeOut(100);
+    $('.modal').fadeIn(800);
+    $('#close-button').click(function() {
+      $('.modal').fadeOut(500);
+      $('.slider-wrapper').fadeIn(500);
+    });
     modal.classList.toggle('closed');
   }
 });
-
-

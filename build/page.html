@@ -15,7 +15,7 @@
     <!-- BEGIN content -->
     <div class="out">
       <!-- header block start -->
-      <header class="header">
+      <div class="header">
         <div class="header-wrapper wrapper block">
           <a href="#" class="logo">
             <div class="logo__img"><img src="img/logo.png" alt="logo" /></div>
@@ -27,7 +27,7 @@
                   <div><input class="find-block__input" type="text" placeholder="Система слежения"></div>
                 </form>
                 <form action="#">
-                  <div class="find-arrow sprite-find" href="#"></div>
+                  <div class="find-arrow sprite-find"></div>
                 </form>
               </div>
               <div><a class="sign-in-btn btn_white">Войти</a></div>
@@ -67,27 +67,47 @@
             </nav>
           </div>
         </div>
-        <div class="range">
-          <span class="range__text">Потяните</span>
-          <input type="range" id="scrollVideo" class="range__input" value="0">
-          <span class="range__text">для просмотра</span>
-        </div>
-        <div class="modal" id="modal" aria-hidden="true" aria-labelledby="modalTitle" aria-describedby="modalDescription" role="dialog">
-          <button class="close-button button-sprite" id="close-button"></button>
-          <div class="modal-guts" role="document">
-            <iframe width="1042" height="587" src="https://www.youtube.com/embed/1hoKQRRYOys" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="content">
+          <div class="video-wrap">
+            <div class="range">
+              <span class="range__text">Потяните</span>
+              <input type="range" id="scrollVideo" class="range__input" value="0">
+              <span class="range__text">для просмотра</span>
+            </div>
+            <div class="modal" id="modal" aria-hidden="true" aria-labelledby="modalTitle" aria-describedby="modalDescription" role="dialog">
+              <button class="close-button button-sprite" id="close-button"></button>
+              <div class="modal-guts" role="document">
+                <div class="video-wrapper video">
+                  <video class="video__item" controls></video>
+                  <div class="video-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-wrapper">
+            <div class="slider">
+              <div class="item"><img src="img/img1.png" alt="img"></div>
+              <div class="item"><img src="img/img2.png" alt="img"></div>
+              <div class="item"><img src="img/img3.png" alt="img"></div>
+              <div class="item"><img src="img/img4.png" alt="img"></div>
+            </div>
           </div>
         </div>
-        <div class="owl-carousel">
-          <div> Your Content </div>
-          <div> Your Content </div>
-          <div> Your Content </div>
-          <div> Your Content </div>
-          <div> Your Content </div>
-          <div> Your Content </div>
-          <div> Your Content </div>
-        </div>
-      </header>
+        <footer>
+          <div class="wrapper">
+            <div class="footer-block block">
+              <div class="copy">ООО “Глосав”. Все права защищены</div>
+              <div class="address">
+                <div class="address__item"><span class="address__desc">Москва, Кожевнический проезд., д. 1</span></div>
+                <div class="address__item"><span class="email__desc">commerce@glosav.ru</span></div>
+                <div class="address__item">
+                  <div class="phone__desc"></div>
+                  <span>+7 (495) 644 33 59</span>
+                </div>
+              </div>
+            </div>
+        </footer>
+      </div>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
