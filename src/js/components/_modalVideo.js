@@ -15,11 +15,11 @@ range.addEventListener('change', function(range) {
   const value = range.target.value;
   const maxValue = 100;
   if (+value === maxValue) {
-    $('.slider-wrapper').fadeOut(100);
+    $('.carousel-wrap').fadeOut(100);
     $('.modal').fadeIn(800);
     $('#close-button').click(function() {
       $('.modal').fadeOut(500);
-      $('.slider-wrapper').fadeIn(500);
+      $('.carousel-wrap').fadeIn(500);
     });
     modal.classList.toggle('closed');
   }
