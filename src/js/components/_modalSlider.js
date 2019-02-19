@@ -1,34 +1,42 @@
+$(function() {
+  const modalContent = $('.content-modal');
 
-// $('.help').click(function() {
-//   $('.help__desc').toggleClass('blockq');
-// });
-// var modalq = document.querySelector('#help'),
-//   modalOverlayq = document.querySelector('#modal-overlay'),
-//   closeButtonq = document.querySelector('#close-button'),
-//   openButtonq = document.querySelector('#open-button');
- 
-// closeButtonq.addEventListner('click', function() {
-//   modalq.classList.toggle('closed');
-//   modalOverlayq.classList.toggle('closed');
-// });
-// openButtonq.addEventListner('click', function() {
-//   modalq.classList.toggle('closed');
-//   modalOverlayq.classList.toggle('closed');
-// });
-var modal = document.querySelector('.modal');
-var trigger = document.querySelector('.trigger');
-var closeButton = document.querySelector('.close-button');
+  modalContent.each(function(index, elem) {
+    const itemsCount = $(elem).find('.items').length;
+    $(elem).attr('date-items', itemsCount);
+  });
+  
 
-function toggleModal() {
-  modal.classList.toggle('show-modal');
-}
+  var modal ={
+    self: $('#modalWindow'),
+    
 
-function windowOnClick(event) {
-  if (event.target === modal) {
-    toggleModal();
-  }
-}
+    showModal:function(content) {
+      this.self.find('#innerModal').html(content);
+      this.self.fadeIn(200);
+    },
+    hideModal: function() {
+      this.self.fadeOut(200);
+      this.self.find('#innerModal').html('');
+    }
+  };
+  $('.showModal').on('click', function(e) {
+    var id = $(this).data('id');
+    var content = $('#cont'+id).html();
+    modal.showModal(content);
+  });
+  $('#modalWindow').on('click',function(e) {
+    if ($(e.target).attr('id')==='modalWindow'|| $(e.target).hasClass('close-button-modal')) {
+      modal.hideModal();
+    } else{
+      return false;
+    }
+  });
+});
 
-trigger.addEventListener('click', toggleModal);
-closeButton.addEventListener('click', toggleModal);
-window.addEventListener('click', windowOnClick);
+const modalContent = $('.modalContent');
+
+modalContent.each(function(index, elem) {
+  const itemsCount = $(elem).find('.items').length;
+  $(elem).attr('date-items', itemsCount);
+});

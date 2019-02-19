@@ -91,25 +91,25 @@
           <div class="carousel-wrap">
             <div class="js-slider slider owl-carousel">
               <div class="help">
-                <div class="item" id="go">
+                <div class="item showModal" data-id='1'>
                   <div class="slider-img"><img class="slider__img" src="img/img1.png" alt="img" /></div>
                   <h2 class="slider__title">Разрботка ПО</h2>
                 </div>
               </div>
               <div class="help">
-                <div class="item">
+                <div class="item showModal" data-id="2">
                   <div class="slider-img"><img class="slider__img" src="img/img2.png" alt="img" /></div>
                   <h2 class="slider__title">Системная Интеграция</h2>
                 </div>
               </div>
               <div class="help">
-                <div class="item">
+                <div class="item showModal" data-id="3">
                   <div class="slider-img"> <img class="slider__img" src="img/img3.png" alt="img" /></div>
                   <h2 class="slider__title">Технологии</h2>
                 </div>
               </div>
               <div class="help">
-                <div class="item">
+                <div class="item showModal" data-id="4">
                   <div class="slider-img"> <img class="slider__img" src="img/img4.png" alt="img" /></div>
                   <h2 class="slider__title">Мониторинг и тахография</h2>
                 </div>
@@ -135,6 +135,61 @@
           </div>
       </footer>
       <!-- footer block end -->
+      <!-- modals -->
+      <div class="modalContent" id="cont1">
+        <div class="content-modal">
+          <div class="items">1</div>
+          <div class="items">2</div>
+        </div>
+      </div>
+      <div class="modalContent" id="cont2">
+        <div class="content-modal slide-system-integration">
+          <div class="slide-system-integration-wparrer">
+            <div class="slide-system-integration-hero">
+              <div class="pop-up-container">
+                <div class="slide-system-integration-hero__text">
+                  <button class="close-button-modal button-sprite" id="close-button"></button>
+                  <p class="slide-system-integration-hero__desc">Система для компаний, занимающихся дистрибуцией. Может быть использована как для оснащения транспортных средств, так и для оснащения персонала. В зависимости от специфики компании выбирается наиболее рациональный комплект оборудования, который может включать: бортовой блок, смартфон, персональный трекер.</p>
+                  <div><button class="slide-system-integration-hero__btn">Подробнее</button></div>
+                </div>
+              </div>
+              <div class="img-modal"></div>
+            </div>
+            <div class="list">
+              <div class="items">
+                <div class="items__content">
+                  <div class="items-img">
+                    <img src="img/item1.png" alt="item">
+                  </div>
+                  <h3>Поставка</h3>
+                </div>
+              </div>
+              <div class="items">1</div>
+              <div class="items">1</div>
+              <div class="items">1</div>
+              <div class="items">1</div>
+              <div class="items">1</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modalContent" id="cont3">
+        <div class="content-modal">
+          <div class="items">1</div>
+        </div>
+      </div>
+      <div class="modalContent" id="cont4">
+        <div class="content-modal">
+          <h1>red</h1>
+        </div>
+      </div>
+      <!-- modal-window -->
+      <div id="modalWindow">
+        <div class="container">
+          <span class="closeModal"></span>
+          <div id="innerModal"></div>
+        </div>
+      </div>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->

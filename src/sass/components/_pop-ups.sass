@@ -1,0 +1,165 @@
+#modalWindow
+    width: 100vw
+    height: 100vh
+    position: fixed
+    top: 0
+    left: 0
+    overflow: auto
+    background: rgba(0,0,0,0.5)
+    display: none
+
+.container
+    margin: 25vh 25vw
+    width: 50vw
+    height: 50vh
+    box-sizing: border-box
+    padding: 15px
+    position: relative
+
+// .container
+//     .closeModal
+//         position: absolute
+//         top: 15px
+//         right: 15px
+
+.modalContent
+    display: none
+
+
+.content-modal[date-items="0"]
+    color: red
+
+.content-modal[date-items="1"]
+    .items
+        color: blue
+
+.content-modal[date-items="2"]
+    color: #efefef
+
+.content-modal[date-items="3"]
+    color: #dddddd
+
+.content-modal[date-items="4"]
+    color: #fdfdfd
+
+.content-modal[date-items="5"]
+    color: yellow
+
+.content-modal[date-items="6"]
+    color: grey
+
+
+.img-modal
+    background-image: url(../img/img2.png)
+    height: 420px
+    background-position: center
+    background-repeat: center
+    background-size: cover
+.slide-system-integration-hero
+    width: 420px
+    height: 420px
+    border-radius: 50%
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    
+    &__desc
+        width: 326px
+        text-align: center
+        color: #ffffff
+        font-family: 'GothamPro'
+        font-size: 16px
+        font-weight: 400
+        line-height: 21px
+        margin-bottom: 34px
+        padding: 5px
+
+.pop-up-container
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(78, 100, 127, 0.7)
+    border-radius: 50%
+
+.slide-system-integration-hero__text
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 326px
+
+.slide-system-integration-hero__btn
+    border-radius: 14px
+    border: 1px solid #ffffff
+    background-color: transparent
+    padding: 6px 23px
+    color: #ffffff
+    font-size: 14px
+    font-weight: 400
+    letter-spacing: 0.7px
+    display: block
+    margin: 0 auto
+
+
+.close-button-modal
+    position: absolute
+    z-index: 1
+    top: -60px
+    right: 0px
+
+.close-button-modal
+    background-image: url(../img/close-btn.png)
+    background-repeat: no-repeat
+    display: block
+    background-color: transparent
+
+.close-button-modal:before
+    content: url(../img/close.svg)
+    position: absolute
+    transform: translate(-50%, -50%)
+    top: 50%
+    left: 50%
+
+.slide-system-integration-hero__text
+    position: relative
+
+.pop-up-container:before
+    content: url(../img/border-line-top.svg)
+    transform: translate(-34%,-50%)
+    position: absolute
+    top: 50%
+    left: 50%
+    transition: .5s
+
+.pop-up-container:after
+    content: url(../img/border-line-bottom.svg)
+    transform: translate(-54%,61%);
+    position: absolute
+    top: 50%
+    left: 50%
+    transition: .5s
+
+.slide-system-integration-hero:before
+    content: url(../img/left-line.svg)
+    position: absolute
+    top: 50%
+    transform: translate(-105%, -50%)
+
+.slide-system-integration-hero:after
+    content: url(../img/right-line.svg)
+    position: absolute
+    top: 50%
+    right: 0
+    transform: translate(105%, -50%)
+
+
+.list .items:first-child
+    position: absolute
+    top: 20px
+    left: 20px
+
+.slide-system-integration-wparrer
+    max-width: 1000px
