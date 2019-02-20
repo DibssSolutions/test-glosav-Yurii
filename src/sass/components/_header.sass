@@ -4,6 +4,8 @@
     display: flex
     flex-direction: column
     padding-top: 22px
+    position: relative
+    z-index: 1
     
 .logo
     display: block
@@ -30,6 +32,7 @@
         text-transform: uppercase
         letter-spacing: 0.56px
         text-decoration: none
+        transition: 0.3s
 
 .menu__item
     margin-right: 38px
@@ -61,10 +64,11 @@
 .lang-btn
     display: flex
     align-items: center
-    align-items: center
-    margin-left: 10px
-    width: 30px
+    justify-content: center
+    width: 50px
 
+.lang-btn:hover .arrow
+    border-top-color: #f58220
 .arrow
     margin-left: 2px
 .rotate
@@ -77,20 +81,21 @@
     border-top-color: #396f8c
     opacity: 0.7
     border-bottom: 0
+    transition: 0.1s
 
-.arrow:hover
-    border-top-color: #f58220
 
 .lang-list
     position: absolute
     top: 100%
     left: 0
     display: none
+    text-align: center
+    width: 40px
     flex-direction: column
-    align-items: flex-start
     background-color: #eaeff2
+    transition: 0.5s
     &__item
-        padding: 10px
+        padding: 5px
         font-size: 14px
 
 .lang__link
@@ -106,6 +111,7 @@
     font-size: 14px
     font-weight: 400
     letter-spacing: 0.7px
+    cursor: pointer
 
 .sign-in-btn:hover
     color: #2e5b72
@@ -147,5 +153,3 @@
 
 .sprite-find:hover
     background-position: -32px -5px
-
-

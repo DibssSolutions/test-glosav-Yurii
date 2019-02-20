@@ -1,11 +1,11 @@
-#modalWindow
+.modalWindow
     width: 100vw
     height: 100vh
     position: fixed
     top: 0
     left: 0
     overflow: auto
-    background: rgba(0,0,0,0.5)
+    background-color: rgba(231, 237, 240, 0.9)
     display: none
 
 .container
@@ -16,36 +16,28 @@
     padding: 15px
     position: relative
 
-// .container
-//     .closeModal
-//         position: absolute
-//         top: 15px
-//         right: 15px
-
 .modalContent
     display: none
 
+.content-modal[data-items="1"]
+    .img-modal
+        background-image: url(../img/img4.png)
 
-.content-modal[date-items="0"]
-    color: red
+.content-modal[data-items="2"]
+    .img-modal
+        background-image: url(../img/img3.png)
 
-.content-modal[date-items="1"]
-    .items
-        color: blue
-
-.content-modal[date-items="2"]
-    color: #efefef
-
-.content-modal[date-items="3"]
+.content-modal[data-items="3"]
     color: #dddddd
 
-.content-modal[date-items="4"]
-    color: #fdfdfd
+.content-modal[data-items="4"]
+    .img-modal
+        background-image: url(../img/img1.png)
 
-.content-modal[date-items="5"]
+.content-modal[data-items="5"]
     color: yellow
 
-.content-modal[date-items="6"]
+.content-modal[data-items="6"]
     color: grey
 
 
@@ -102,26 +94,46 @@
     letter-spacing: 0.7px
     display: block
     margin: 0 auto
+    cursor: pointer
+    transition: 0.3s
 
+.slide-system-integration-hero__btn:hover
+    color: #396f8c
+    background-color: #ffffff
 
 .close-button-modal
+    background-color: #f58220
+    width: 64px
+    height: 64px
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 50%
+    transition: 0.3s
     position: absolute
-    z-index: 1
     top: -60px
     right: 0px
 
-.close-button-modal
-    background-image: url(../img/close-btn.png)
-    background-repeat: no-repeat
+.close-button-modal img
     display: block
-    background-color: transparent
+    width: 19px
+    height: 19px
 
-.close-button-modal:before
-    content: url(../img/close.svg)
-    position: absolute
-    transform: translate(-50%, -50%)
-    top: 50%
-    left: 50%
+.close-button-modal:hover
+    background-color: #2c5b72
+
+// .close-button-modal
+//     background-image: url(../img/close-btn.png)
+//     background-repeat: no-repeat
+//     display: block
+//     background-color: transparent
+
+// .close-button-modal:before
+//     content: url(../img/close.svg)
+//     position: absolute
+//     transform: translate(-50%, -50%)
+//     top: 50%
+//     left: 50%
 
 .slide-system-integration-hero__text
     position: relative
@@ -133,6 +145,7 @@
     top: 50%
     left: 50%
     transition: .5s
+    z-index: -1
 
 .pop-up-container:after
     content: url(../img/border-line-bottom.svg)
@@ -141,25 +154,480 @@
     top: 50%
     left: 50%
     transition: .5s
+    z-index: -1
 
-.slide-system-integration-hero:before
+[data-items="6"] .slide-system-integration-hero:before
     content: url(../img/left-line.svg)
     position: absolute
     top: 50%
     transform: translate(-105%, -50%)
 
-.slide-system-integration-hero:after
+[data-items="6"] .slide-system-integration-hero:after
     content: url(../img/right-line.svg)
     position: absolute
     top: 50%
-    right: 0
+    right: 0px
     transform: translate(105%, -50%)
 
-
-.list .items:first-child
+[data-items="5"] .slide-system-integration-hero:before
+    content: url(../img/left-line.svg)
     position: absolute
-    top: 20px
-    left: 20px
+    top: 50%
+    transform: translate(-105%, -50%)
 
-.slide-system-integration-wparrer
-    max-width: 1000px
+[data-items="5"] .slide-system-integration-hero:after
+    content: url(../img/right-line.svg)
+    position: absolute
+    top: 50%
+    right: 0px
+    transform: translate(105%, -50%)
+
+[data-items="4"] .slide-system-integration-hero:before
+    content: url(../img/small-left-line.svg)
+    position: absolute
+    top: 50%
+    left: -35px
+    transform: translate(-105%, -50%)
+
+[data-items="4"] .slide-system-integration-hero:after
+    content: url(../img/small-right-line.svg)
+    position: absolute
+    top: 50%
+    right: -35px
+    transform: translate(105%, -50%)
+
+[data-items="3"] .slide-system-integration-hero:before
+    content: url(../img/small-left-line.svg)
+    position: absolute
+    top: 50%
+    left: -35px
+    transform: translate(-105%, -50%)
+
+[data-items="3"] .slide-system-integration-hero:after
+    content: url(../img/small-right-line.svg)
+    position: absolute
+    top: 50%
+    right: -35px
+    transform: translate(105%, -50%)
+
+[data-items="2"] .slide-system-integration-hero:before
+    content: url(../img/small-left-line.svg)
+    position: absolute
+    top: 50%
+    left: -35px
+    transform: translate(-105%, -50%)
+
+[data-items="1"] .slide-system-integration-hero:before
+    content: url(../img/small-left-line.svg)
+    position: absolute
+    top: 50%
+    left: -35px
+    transform: translate(-105%, -50%)
+
+.list .items
+    position: absolute
+    text-align: center
+
+.items-content
+    max-width: 250px
+
+.items-content__img
+    border: 2px solid #2e5b72
+    border-radius: 50%
+    padding: 5px
+    transition: 0.5s
+    margin: 0 auto;
+    max-width: 140px;
+
+.items-content:hover .items-content__img
+    border: 2px solid #f58220
+
+.items-content:hover h3
+    color: #f58220
+
+
+.items-content__img img
+    display: block
+
+.items-content__title
+    transition: 0.5s
+    color: #2c5b72
+    font-family: 'GothamPro'
+    font-size: 14px
+    font-weight: 500
+    text-transform: uppercase
+    letter-spacing: 0.56px
+    margin-top: 5px
+
+[data-items="6"] .items:nth-child(1)
+    top: -59px;
+    left: -189px;
+
+[data-items="6"] .items:nth-child(1):after
+    content: ""
+    position: absolute
+    right: -49px
+    bottom: 30%
+    transform: rotate(30deg)
+    width: 60px
+    height: 2px
+    background-color: #2e5b72
+
+[data-items="6"] .items:nth-child(2):after
+    content: ""
+    position: absolute
+    right: -5px
+    top: 40%
+    width: 60px
+    height: 2px
+    background-color: #2e5b72
+
+[data-items="6"] .items:nth-child(3):after
+    content: ""
+    position: absolute
+    transform: rotate(-30deg)
+    top: 20%
+    right: -52px
+    width: 60px
+    height: 2px
+    background-color: #2e5b72
+
+[data-items="6"] .items:nth-child(4):after
+    content: ""
+    position: absolute
+    transform: rotate(-30deg)
+    bottom: 30%
+    left: -49px
+    width: 60px
+    height: 2px
+    background-color: #2e5b72
+
+[data-items="6"] .items:nth-child(5):after
+    content: ""
+    position: absolute
+    left: -60px
+    top: 40%
+    width: 60px
+    height: 2px
+    background-color: #2e5b72
+
+[data-items="6"] .items:nth-child(6):after
+    content: ""
+    position: absolute
+    transform: rotate(30deg)
+    top: 20%
+    left: -52px
+    width: 60px
+    height: 2px
+    background-color: #2e5b72
+
+[data-items="6"] .items:nth-child(2)
+    left: -300px
+    top: 125px
+
+[data-items="6"] .items:nth-child(3)
+    left: -191px
+    bottom: -70px
+
+[data-items="6"] .items:nth-child(4)
+    top: -59px
+    right: -189px
+
+[data-items="6"] .items:nth-child(5)
+    right: -243px
+    top: 125px
+
+[data-items="6"] .items:nth-child(6)
+    right: -191px
+    bottom: -70px
+
+// 5 items
+
+[data-items="5"] .items:nth-child(1):after
+    content: ""
+    position: absolute
+    right: -49px
+    bottom: 30%
+    transform: rotate(30deg)
+    width: 60px
+    height: 2px
+    background-color: #2e5b72
+
+[data-items="5"] .items:nth-child(2):after
+    content: ""
+    position: absolute
+    right: -5px
+    top: 40%
+    width: 60px
+    height: 2px
+    background-color: #2e5b72
+
+[data-items="5"] .items:nth-child(3):after
+    content: ""
+    position: absolute
+    transform: rotate(-30deg)
+    top: 20%
+    right: -52px
+    width: 60px
+    height: 2px
+    background-color: #2e5b72
+
+[data-items="5"] .items:nth-child(4):after
+    content: ""
+    position: absolute
+    transform: rotate(-30deg)
+    bottom: 30%
+    left: -49px
+    width: 60px
+    height: 2px
+    background-color: #2e5b72
+
+[data-items="5"] .items:nth-child(5):after
+    content: ""
+    position: absolute
+    left: -60px
+    top: 40%
+    width: 60px
+    height: 2px
+    background-color: #2e5b72
+
+[data-items="5"] .items:nth-child(1)
+    top: -59px
+    left: -189px
+
+[data-items="5"] .items:nth-child(2)
+    left: -300px
+    top: 125px
+
+[data-items="5"] .items:nth-child(3)
+    left: -191px
+    bottom: -70px
+
+[data-items="5"] .items:nth-child(4)
+    top: -59px
+    right: -189px
+
+[data-items="5"] .items:nth-child(5)
+    right: -243px
+    top: 125px
+
+// 4 items
+
+[data-items="4"] .items:nth-child(1):after
+    content: ""
+    position: absolute
+    right: -49px
+    bottom: 30%
+    transform: rotate(30deg)
+    width: 60px
+    height: 2px
+    background-color: #2e5b72
+
+[data-items="4"] .items:nth-child(2):after
+    content: ""
+    position: absolute
+    transform: rotate(-30deg)
+    top: 20%
+    right: -52px
+    width: 60px
+    height: 2px
+    background-color: #2e5b72
+
+[data-items="4"] .items:nth-child(3):after
+    content: ""
+    position: absolute
+    left: -49px
+    bottom: 30%
+    transform: rotate(-30deg)
+    width: 60px
+    height: 2px
+    background-color: #2e5b72
+
+[data-items="4"] .items:nth-child(4):after
+    content: ""
+    position: absolute
+    transform: rotate(30deg)
+    top: 20%
+    left: -52px
+    width: 60px
+    height: 2px
+    background-color: #2e5b72
+
+[data-items="4"] .items:nth-child(1)
+    top: 2px
+    left: -221px
+
+[data-items="4"] .items:nth-child(2)
+    bottom: -11px
+    left: -225px
+
+[data-items="4"] .items:nth-child(3)
+    top: 1px
+    right: -222px
+
+[data-items="4"] .items:nth-child(4)
+    bottom: -10px
+    right: -225px
+
+// 3 items
+[data-items="3"] .items:nth-child(1):after
+    content: ""
+    position: absolute
+    right: -49px
+    bottom: 30%
+    transform: rotate(30deg)
+    width: 60px
+    height: 2px
+    background-color: #2e5b72
+
+[data-items="3"] .items:nth-child(2):after
+    content: ""
+    position: absolute
+    transform: rotate(-30deg)
+    top: 20%
+    right: -52px
+    width: 60px
+    height: 2px
+    background-color: #2e5b72
+
+[data-items="3"] .items:nth-child(3):after
+    content: ""
+    position: absolute
+    left: -49px
+    bottom: 30%
+    transform: rotate(-30deg)
+    width: 60px
+    height: 2px
+    background-color: #2e5b72
+
+[data-items="3"] .items:nth-child(1)
+    top: 2px
+    left: -221px
+
+[data-items="3"] .items:nth-child(2)
+    bottom: -11px
+    left: -225px
+
+[data-items="3"] .items:nth-child(3)
+    top: 1px
+    right: -222px
+
+// 2 items
+
+
+[data-items="2"] .items:nth-child(1):after
+    content: ""
+    position: absolute
+    right: -49px
+    bottom: 30%
+    transform: rotate(30deg)
+    width: 60px
+    height: 2px
+    background-color: #2e5b72
+
+[data-items="2"] .items:nth-child(2):after
+    content: ""
+    position: absolute
+    transform: rotate(-30deg)
+    top: 20%
+    right: -52px
+    width: 60px
+    height: 2px
+    background-color: #2e5b72
+
+[data-items="2"] .items:nth-child(1)
+    top: 1px
+    left: -221px
+
+[data-items="2"] .items:nth-child(2)
+    bottom: -11px
+    left: -225px
+
+// 1 item
+
+[data-items="1"] .items:nth-child(1):after
+    content: ""
+    position: absolute
+    right: -49px
+    bottom: 30%
+    transform: rotate(30deg)
+    width: 60px
+    height: 2px
+    background-color: #2e5b72
+
+[data-items="1"] .items:nth-child(1)
+    top: 1px
+    left: -221px
+
+
+.modalLogin
+    background-color: rgba(44, 91, 114, 0.7)
+    z-index: 1
+
+
+.login-popUp
+    position: relative
+    max-width: 420px
+    margin: 0 auto
+    padding: 42px
+    border-radius: 30px
+    background-color: #ffffff
+    &__title
+        color: #2c5b72
+        font-family: "GothamPro"
+        font-size: 18px
+        font-weight: 500
+        margin-bottom: 26px
+
+.login-form__text
+    width: 100%
+    border-radius: 24px
+    background-color: #e5edf1
+    font-size: 14px
+    padding: 16px 0 16px 25px
+    margin-bottom: 23px
+
+::-webkit-input-placeholder
+    color: #396f8c
+    font-family: "GothamPro"
+    font-size: 14px
+    font-weight: 400
+    letter-spacing: 0.28px
+
+.login-form__btn
+    font-family: "GothamPro"
+    border-radius: 24px
+    text-align: center
+    background-color: #ee8a00
+    text-decoration: none
+    color: #ffffff
+    font-size: 16px
+    letter-spacing: 0.8px
+    width: 160px
+    padding: 13px 0
+    margin-top: 5px
+    transition: 0.3s
+
+.login-form__btn:hover
+    background-color: #2c5b72
+
+.close-btn
+    background-color: #f58220
+    width: 43px
+    height: 43px
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 50%
+    transition: 0.3s
+    position: absolute
+    top: -17px
+    right: -19px
+
+.close-btn img
+    display: block
+    width: 13px
+    height: 14px
+
+.close-btn:hover
+    background-color: #2c5b72

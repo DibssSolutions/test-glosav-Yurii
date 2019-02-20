@@ -30,7 +30,7 @@
                   <div class="find-arrow sprite-find"></div>
                 </form>
               </div>
-              <div><a class="sign-in-btn btn_white">Войти</a></div>
+              <div><a class="sign-in-btn btn_white showModal" data-id="5">Войти</a></div>
               <div class="lang">
                 <div class="lang-btn">
                   <a class="lang__current">Ru</a>
@@ -49,10 +49,10 @@
             <nav class="header-nav">
               <ul class="menu">
                 <li class="menu__item">
-                  <a href="page.html">О компании</a>
+                  <a href="#">О компании</a>
                 </li>
                 <li class="menu__item">
-                  <a href="tokens.html" class="tokens-link">Направления</a>
+                  <a href="#">Направления</a>
                 </li>
                 <li class="menu__item">
                   <a href="#">Продукты</a>
@@ -137,9 +137,55 @@
       <!-- footer block end -->
       <!-- modals -->
       <div class="modalContent" id="cont1">
-        <div class="content-modal">
-          <div class="items">1</div>
-          <div class="items">2</div>
+        <div class="content-modal slide-system-integration">
+          <div class="slide-system-integration-wparrer">
+            <div class="slide-system-integration-hero">
+              <div class="pop-up-container">
+                <div class="slide-system-integration-hero__text">
+                  <div class="close-button-modal" id="close-button">
+                    <img class="close" src="img/close.svg" alt="close button">
+                  </div>
+                  <p class="slide-system-integration-hero__desc">Система для компаний, занимающихся дистрибуцией. Может быть использована как для оснащения транспортных средств, так и для оснащения персонала. В зависимости от специфики компании выбирается наиболее рациональный комплект оборудования, который может включать: бортовой блок, смартфон, персональный трекер.</p>
+                  <div><button class="slide-system-integration-hero__btn">Подробнее</button></div>
+                </div>
+              </div>
+              <div class="img-modal"></div>
+              <div class="list">
+                <div class="items">
+                  <div class="items-content">
+                    <div class="items-content__img">
+                      <img src="img/item1.png" alt="item">
+                    </div>
+                    <h3 class="items-content__title">Поставка</h3>
+                  </div>
+                </div>
+                <div class="items">
+                  <div class="items-content">
+                    <div class="items-content__img">
+                      <img src="img/item2.png" alt="item">
+                    </div>
+                    <h3 class="items-content__title">Монтаж</h3>
+                  </div>
+                </div>
+                <div class="items">
+                  <div class="items-content">
+                    <div class="items-content__img">
+                      <img src="img/item3.png" alt="item">
+                    </div>
+                    <h3 class="items-content__title">Пусконаладка</h3>
+                  </div>
+                </div>
+                <div class="items">
+                  <div class="items-content">
+                    <div class="items-content__img">
+                      <img src="img/item4.png" alt="item">
+                    </div>
+                    <h3 class="items-content__title">Поставка</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="modalContent" id="cont2">
@@ -148,43 +194,150 @@
             <div class="slide-system-integration-hero">
               <div class="pop-up-container">
                 <div class="slide-system-integration-hero__text">
-                  <button class="close-button-modal button-sprite" id="close-button"></button>
+                  <div class="close-button-modal button-sprite" id="close-button">
+                    <img class="close" src="img/close.svg" alt="close button">
+                  </div>
                   <p class="slide-system-integration-hero__desc">Система для компаний, занимающихся дистрибуцией. Может быть использована как для оснащения транспортных средств, так и для оснащения персонала. В зависимости от специфики компании выбирается наиболее рациональный комплект оборудования, который может включать: бортовой блок, смартфон, персональный трекер.</p>
                   <div><button class="slide-system-integration-hero__btn">Подробнее</button></div>
                 </div>
               </div>
               <div class="img-modal"></div>
-            </div>
-            <div class="list">
-              <div class="items">
-                <div class="items__content">
-                  <div class="items-img">
-                    <img src="img/item1.png" alt="item">
+              <div class="list">
+                <div class="items">
+                  <div class="items-content">
+                    <div class="items-content__img">
+                      <img src="img/item1.png" alt="item">
+                    </div>
+                    <h3 class="items-content__title">Поставка</h3>
                   </div>
-                  <h3>Поставка</h3>
+                </div>
+                <div class="items">
+                  <div class="items-content">
+                    <div class="items-content__img">
+                      <img src="img/item2.png" alt="item">
+                    </div>
+                    <h3 class="items-content__title">Монтаж высокопрофессиональный</h3>
+                  </div>
+                </div>
+                <div class="items">
+                  <div class="items-content">
+                    <div class="items-content__img">
+                      <img src="img/item3.png" alt="item">
+                    </div>
+                    <h3 class="items-content__title">Пусконаладка</h3>
+                  </div>
+                </div>
+                <div class="items">
+                  <div class="items-content">
+                    <div class="items-content__img">
+                      <img src="img/item4.png" alt="item">
+                    </div>
+                    <h3 class="items-content__title">Поставка</h3>
+                  </div>
+                </div>
+                <div class="items">
+                  <div class="items-content">
+                    <div class="items-content__img">
+                      <img src="img/item5.png" alt="item">
+                    </div>
+                    <h3 class="items-content__title">Монтаж</h3>
+                  </div>
+                </div>
+                <div class="items">
+                  <div class="items-content">
+                    <div class="items-content__img">
+                      <img src="img/item6.png" alt="item">
+                    </div>
+                    <h3 class="items-content__title">Пусконаладка</h3>
+                  </div>
                 </div>
               </div>
-              <div class="items">1</div>
-              <div class="items">1</div>
-              <div class="items">1</div>
-              <div class="items">1</div>
-              <div class="items">1</div>
             </div>
           </div>
         </div>
       </div>
       <div class="modalContent" id="cont3">
-        <div class="content-modal">
-          <div class="items">1</div>
+        <div class="content-modal slide-system-integration">
+          <div class="slide-system-integration-wparrer">
+            <div class="slide-system-integration-hero">
+              <div class="pop-up-container">
+                <div class="slide-system-integration-hero__text">
+                  <div class="close-button-modal button-sprite" id="close-button">
+                    <img class="close" src="img/close.svg" alt="close button">
+                  </div>
+                  <p class="slide-system-integration-hero__desc">Система для компаний, занимающихся дистрибуцией. Может быть использована как для оснащения транспортных средств, так и для оснащения персонала. В зависимости от специфики компании выбирается наиболее рациональный комплект оборудования, который может включать: бортовой блок, смартфон, персональный трекер.</p>
+                  <div><button class="slide-system-integration-hero__btn">Подробнее</button></div>
+                </div>
+              </div>
+              <div class="img-modal"></div>
+              <div class="list">
+                <div class="items">
+                  <div class="items-content">
+                    <div class="items-content__img">
+                      <img src="img/item1.png" alt="item">
+                    </div>
+                    <h3 class="items-content__title">Поставка</h3>
+                  </div>
+                </div>
+                <div class="items">
+                  <div class="items-content">
+                    <div class="items-content__img">
+                      <img src="img/item3.png" alt="item">
+                    </div>
+                    <h3 class="items-content__title">Пусконаладка</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="modalContent" id="cont4">
+        <div class="content-modal slide-system-integration">
+          <div class="slide-system-integration-wparrer">
+            <div class="slide-system-integration-hero">
+              <div class="pop-up-container">
+                <div class="slide-system-integration-hero__text">
+                  <div class="close-button-modal button-sprite" id="close-button">
+                    <img class="close" src="img/close.svg" alt="close button">
+                  </div>
+                  <p class="slide-system-integration-hero__desc">Система для компаний, занимающихся дистрибуцией. Может быть использована как для оснащения транспортных средств, так и для оснащения персонала. В зависимости от специфики компании выбирается наиболее рациональный комплект оборудования, который может включать: бортовой блок, смартфон, персональный трекер.</p>
+                  <div><button class="slide-system-integration-hero__btn">Подробнее</button></div>
+                </div>
+              </div>
+              <div class="img-modal"></div>
+              <div class="list">
+                <div class="items">
+                  <div class="items-content">
+                    <div class="items-content__img">
+                      <img src="img/item1.png" alt="item">
+                    </div>
+                    <h3 class="items-content__title">Поставка</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modalContent" id="cont5">
         <div class="content-modal">
-          <h1>red</h1>
+          <div class="login-popUp">
+            <h2 class="login-popUp__title">Вход в web-систему</h2>
+            <form class="login-form" action="">
+              <div><input type="name" class="login-form__text" placeholder="Компания" required></div>
+              <div><input type="text" class="login-form__text" placeholder="Логин"></div>
+              <div><input type="text" class="login-form__text" placeholder="Пароль"></div>
+              <button type="submit" class="login-form__btn">Войти</button>
+            </form>
+            <div class="close-btn close">
+              <img class="close" src="img/close.svg" alt="close button">
+            </div>
+          </div>
         </div>
       </div>
       <!-- modal-window -->
-      <div id="modalWindow">
+      <div id="modalWindow" class="modalWindow">
         <div class="container">
           <span class="closeModal"></span>
           <div id="innerModal"></div>
