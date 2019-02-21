@@ -18,8 +18,19 @@ range.addEventListener('change', function(range) {
     $('.modal').fadeIn(800);
     $('#close-button').click(function() {
       $('.modal').fadeOut(500);
-      $('.carousel-wrap').fadeIn(500);
+      $('.carousel-wrap').fadeIn(1000);
     });
     modal.classList.toggle('closed');
+    document.getElementById('close-button').onclick = function(e) {
+      document.getElementById('scrollVideo').value = '0';
+    };
+  }
+});
+
+$(document).on('click', function(hideVideo) {
+  if (!$(hideVideo.target).closest('.modal').length) {
+    $('.modal').fadeOut(500);
+    $('.carousel-wrap').fadeIn(1000);
+    document.getElementById('scrollVideo').value = '0';
   }
 });

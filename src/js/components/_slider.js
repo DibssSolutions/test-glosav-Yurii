@@ -7,22 +7,16 @@ $('.js-slider').owlCarousel({
   loop: true
 });
 
+var owl = $('.owl-carousel');
 
-// const items = document.querySelectorAll('.item');
-// const root = document.querySelector('.content');
-// const content = {
-//   first: 'Some text for the first',
-//   second: 'Some text for the second'
-// };
-// console.log(content);
-// items.forEach(function(elem) {
-//   elem.addEventListener('click', function(e) {
-//     const atr = elem.getAttribute('data-item');
-//     const template = `
-//         <div class="content__text">${content[atr]}</div>
-//         <button class="content__button">Info</button>
-//       `;
-//     root.innerHTML = template;
-//   });
-// });
 
+
+$(window).resize(function() {
+  console.log($(window).width());
+  if($(window).width() < 1023) {
+    owl.trigger('destroy.owl.carousel');
+    $('.slider').toggleClass('d-block');
+    $('.row').removeClass('slider');
+    $('.help').addClass('col-sm-6');
+  }
+});
