@@ -20,3 +20,22 @@ $(window).resize(function() {
     $('.help').addClass('col-sm-6');
   }
 });
+$('.slide-system-integration-hero__text').find('div.close-button-modal').remove();
+
+
+
+
+(function($) {
+  $(function() {
+    $('.menu__icon').on('click', function() {
+      $(this).closest('.menu')
+        .toggleClass('menu_state_open');
+    });
+    
+    $('.menu__links-item').on('click', function() {
+
+      $(this).closest('.menu')
+        .removeClass('menu_state_open');
+    });
+  });
+})(jQuery);

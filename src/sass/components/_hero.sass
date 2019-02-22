@@ -157,6 +157,8 @@
     box-sizing: border-box
     border-radius: 50%
     transition: 0.5s
+    +md
+        padding: 5px
 
 .slider__img:hover
     border: 2px solid transparent
@@ -166,7 +168,8 @@
     box-sizing: border-box
     filter: blur(2px)
     transition: 0.5s
-
+    +md
+        filter: blur(0)
 
 .help
     position: relative

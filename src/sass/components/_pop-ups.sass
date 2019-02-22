@@ -7,18 +7,36 @@
     overflow: auto
     background-color: rgba(231, 237, 240, 0.9)
     display: none
+    +md
+        background-color: rgba(231, 237, 240, 1)
+        height: 100%
 
 .container
     margin: 25vh 25vw
     width: 50vw
     height: 50vh
     box-sizing: border-box
-    padding: 15px
+    padding: 25px 15px
     position: relative
+    +md
+        margin: 0vh 0vw
+        width: 100%
+        height: auto
 
 .modalContent
     display: none
 
+.content-modal[data-items] .img-modal
+    +md
+        background-image: none
+        order: -1
+
+.img-modal img
+    display: none
+    +md
+        display: block
+        margin: 0 auto
+        max-width: 180px
 .content-modal[data-items="1"]
     .img-modal
         background-image: url(../img/img4.png)
@@ -45,8 +63,30 @@
     background-image: url(../img/img2.png)
     height: 420px
     background-position: center
-    background-repeat: center
     background-size: cover
+    position: relative
+    z-index: -1
+    +md
+        height: auto
+
+.img-modal:before
+    content: url(../img/small-border-line-top.png)
+    transform: translate(-36%,-49%)
+    position: absolute
+    top: 50%
+    left: 50%
+    transition: .5s
+    z-index: -1
+
+.img-modal:after
+    content: url(../img/small-border-line-bottom.png)
+    transform: translate(-58%,53%) rotate(5deg)
+    position: absolute
+    top: 50%
+    left: 50%
+    transition: .5s
+    z-index: -1
+
 .slide-system-integration-hero
     width: 420px
     height: 420px
@@ -55,6 +95,13 @@
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
+    +md
+        display: flex
+        flex-direction: column
+        position: static
+        width: auto
+        height: auto
+        transform: translate(0)
     
     &__desc
         width: 326px
@@ -66,6 +113,13 @@
         line-height: 21px
         margin-bottom: 34px
         padding: 5px
+        +md
+            width: 100%
+            color: #396f8c
+            line-height: 27px
+            text-align: left
+            margin: 0
+            padding: 0
 
 .pop-up-container
     position: absolute;
@@ -75,6 +129,9 @@
     height: 100%;
     background-color: rgba(78, 100, 127, 0.7)
     border-radius: 50%
+    +md
+        background-color: transparent
+        position: static
 
 .slide-system-integration-hero__text
     position: absolute
@@ -82,6 +139,11 @@
     left: 50%
     transform: translate(-50%, -50%)
     width: 326px
+    +md
+        top: 0%
+        left: 0%
+        transform: translate(0%)
+        width: 100%
 
 .slide-system-integration-hero__btn
     border-radius: 14px
@@ -96,10 +158,17 @@
     margin: 0 auto
     cursor: pointer
     transition: 0.3s
+    +md
+        margin: 28px 0 37px
+        border: 1px solid #2c5b72
+        color: #2c5b72
 
 .slide-system-integration-hero__btn:hover
     color: #396f8c
     background-color: #ffffff
+    +md
+        background-color: #2c5b72
+        color: #ffffff
 
 .close-button-modal
     background-color: #f58220
@@ -114,27 +183,23 @@
     top: -60px
     right: 0px
     cursor: pointer
+    +md
+        width: 52px
+        height: 52px
+        top: -14px;
+        transform: translate(267%, 0%)
+        right: 50%
 
 .close-button-modal img
     display: block
     width: 19px
     height: 19px
+    +md
+        width: 16px
+        height: 16px
 
 .close-button-modal:hover
     background-color: #2c5b72
-
-// .close-button-modal
-//     background-image: url(../img/close-btn.png)
-//     background-repeat: no-repeat
-//     display: block
-//     background-color: transparent
-
-// .close-button-modal:before
-//     content: url(../img/close.svg)
-//     position: absolute
-//     transform: translate(-50%, -50%)
-//     top: 50%
-//     left: 50%
 
 .slide-system-integration-hero__text
     position: relative
@@ -147,6 +212,8 @@
     left: 50%
     transition: .5s
     z-index: -1
+    +md
+        content: none
 
 .pop-up-container:after
     content: url(../img/border-line-bottom.svg)
@@ -156,6 +223,8 @@
     left: 50%
     transition: .5s
     z-index: -1
+    +md
+        content: none
 
 [data-items="6"] .slide-system-integration-hero:before
     content: url(../img/left-line.svg)
@@ -236,17 +305,27 @@
     position: absolute
     text-align: center
     cursor: pointer
+    +md
+        position: static
+        margin-bottom: 15px
 
 .items-content
     max-width: 250px
+    +md
+        max-width: 100%
+        display: flex
+        align-items: center
 
 .items-content__img
     border: 2px solid #2e5b72
     border-radius: 50%
     padding: 5px
     transition: 0.5s
-    margin: 0 auto;
-    max-width: 140px;
+    margin: 0 auto
+    max-width: 140px
+    +md
+        margin: 0
+        padding: 3px
 
 .items-content:hover .items-content__img
     border: 2px solid #f58220
@@ -257,6 +336,8 @@
 
 .items-content__img img
     display: block
+    +md
+        max-width: 90px
 
 .items-content__title
     transition: 0.5s
@@ -267,6 +348,18 @@
     text-transform: uppercase
     letter-spacing: 0.56px
     margin-top: 5px
+    +md
+        margin-top: 0
+        margin-left: 17px
+        max-width: 170px
+        text-align: left
+        line-height: 1
+        
+
+.small-word
+    +md
+        font-size: 10px
+        letter-spacing: 0.4px
 
 [data-items="6"] .items:nth-child(1)
     top: -59px;
@@ -565,6 +658,21 @@
     top: 131px
     left: -249px
 
+.items::after
+    +md
+        display: none
+
+.items::before
+    +md
+        display: none
+
+.slide-system-integration-hero:after
+    +md
+        display: none
+
+.slide-system-integration-hero:before
+    +md
+        display: none
 
 .modalLogin
     background-color: rgba(44, 91, 114, 0.7)
@@ -650,3 +758,11 @@
     margin: 0 auto
     margin-top: 58px
     max-width: 185px
+    +md
+        order: -1
+        margin-top: 37px
+        margin-bottom: 36px
+        color: #396f8c
+        font-weight: 600
+        font-size: 16px
+        max-width: 245px

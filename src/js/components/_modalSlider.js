@@ -29,11 +29,13 @@ $(function() {
     var id = $(this).data('id');
     var content = $('#cont'+id).html();
     modal.showModal(content);
+    $('body').addClass('overflow');
   });
   $('#modalWindow').on('click',function(e) {
     if ($(e.target).attr('id')==='modalWindow'|| $(e.target).hasClass('close-button-modal')|| $(e.target).hasClass('close') || $(e.target).hasClass('content-modal')) {
       modal.hideModal();
       $('.modalWindow').removeClass('modalLogin');
+      $('body').removeClass('overflow');
     } else{
       return false;
     }
@@ -47,4 +49,8 @@ modalContent.each(function(index, elem) {
   $(elem).attr('data-items', itemsCount);
 });
 
+
+$('.item').click(function() {
+
+});
 
