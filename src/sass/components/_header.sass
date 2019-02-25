@@ -48,13 +48,16 @@
         +md
             font-size: 13px
 
-.menu__item
+.menu__item a
     margin-right: 38px
     +md
         margin-right: 30px
+        margin-bottom: 15px
 
-.menu__item:last-child
+.menu__item a:last-child
     margin-right: 0
+    +md
+        margin-bottom: 0
 
 .menu__item a:hover
     color: #f58220
@@ -179,108 +182,82 @@
     background-position: -32px -5px
 
 
-.header-nav
-    +md
-        display: none
+// .header-nav
+//     +md
+//         display: none
 
-.menu 
-    text-align: right;
-
-
-.menu__icon 
-   display: none;
-   width: 45px;
-   height: 35px;
-   position: relative;
-   cursor: pointer;
-
-
-.menu__icon span 
-  display: block;
-  position: absolute;
-  height: 9px;
-  width: 100%;
-  background: #333333;
-  border-radius: 9px;
-  opacity: 1;
-  left: 0;
-  transform: rotate(0deg);
-  transition: .25s ease-in-out;
-
-
-.menu__icon span:nth-child(1) 
-  top: 0px;
-
-
-.menu__icon span:nth-child(2), .menu__icon span:nth-child(3) 
-  top: 13px;
-
-
-.menu__icon span:nth-child(4) 
-  top: 26px;
- 
-
-.menu__links-item 
-    display: inline-block;
-    color: #333333;
-    font-family: Arial;
-    font-size: 14px;
-    line-height: 30px;
-    padding: 0 10px;
-    text-transform: uppercase;
-    text-decoration: none;
-    cursor: pointer;
-
-
-.menu__links-item:hover 
-    text-decoration: underline;
-
-
-.menu.menu_state_open .menu__icon span:nth-child(1) 
-  top: 18px;
-  width: 0%;
-  left: 50%;
-
-.menu.menu_state_open .menu__icon span:nth-child(2) 
-  transform: rotate(45deg);
-
-
-.menu.menu_state_open  .menu__icon span:nth-child(3) 
-  transform: rotate(-45deg)
-
-.menu.menu_state_open  .menu__icon span:nth-child(4) 
-  top: 18px;
-  width: 0%;
-  left: 50%;
-
-
-.menu.menu_state_open .menu__links 
-  display: block;  
-
-
-
-.menu__icon
+.menu-icon
+    display: none
+    width: 33px
+    height: 30px
+    position: relative
+    cursor: pointer
+    transform: translateY(20%)
     +md
         display: inline-block
-  
-  
-.menu__links
+
+.menu__item
     +md
-        position: fixed;
-        display: none;
-        top: 0;
-        right: 0;
-        left: 0;
-        margin-top: 52px;
-        background-color: rgba(0, 0, 0, 0.8);
-        z-index: 1000;
-        overflow: auto;
-    
-  
-.menu__links-item
+        position: absolute
+        display: none
+        top: 0
+        right: 0
+        left: 0
+        margin-top: 52px
+        padding: 12px
+        background-color: #ffffff
+        z-index: 1000
+        overflow: auto
+
+
+.menu-icon span
+    display: block
+    position: absolute
+    height: 3px
+    width: 100%
+    background-color: #396f8c
+    opacity: 1
+    left: 0
+    transform: rotate(0deg)
+    transition: 0.4s
+
+.menu-icon span:nth-child(1)
+    top: 0px
+
+.menu-icon span:nth-child(2), .menu-icon span:nth-child(3)
+    top: 13px
+
+.menu-icon span:nth-child(4)
+    top: 26px
+
+.menu.menu_stage_open .menu-icon span:nth-child(1) 
+    top: 18px
+    width: 0%
+    left: 50%
+
+
+.menu.menu_stage_open .menu-icon span:nth-child(2) 
+    transform: rotate(45deg)
+
+
+.menu.menu_stage_open .menu-icon span:nth-child(3) 
+    transform: rotate(-45deg)
+
+
+.menu.menu_stage_open .menu-icon span:nth-child(4) 
+    top: 18px
+    width: 0%
+    left: 50%
+
+
+.menu.menu_stage_open .menu__item
     +md
-        display: block;
-        padding: 10px 0;
-        text-align: center;
-        color: #ffffff;
-  
+        display: block
+
+.menu.menu_stage_open .menu__item a
+    +md
+        display: block
+
+.menu__item a
+    +md 
+        display: none

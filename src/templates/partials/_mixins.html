@@ -1,6 +1,3 @@
-{% macro icon(i) %}
-<svg class="icon icon-{{i}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
-{% endmacro %}
 
 {% macro breadcrumbs(props) %}
 <!-- begin breadcrumbs -->
@@ -20,11 +17,3 @@
 <!-- end breadcrumbs -->
 {% endmacro %}
 
-{% macro checkbox(props) %}
-<!-- begin input -->
-<label class="{% if props.radio %}radio{% else %}checkbox{% endif %}{% if props.class %} {{ props.class }}{% endif %}">
-	<input type="{% if props.radio %}radio{% else %}checkbox{% endif %}" name="{{ props.name or 'checkbox' }}"{% if props.checked %} checked{% endif %}>
-	<span class="{% if props.radio %}radio{% else %}checkbox{% endif %}__text">{{ props.text or 'checkbox' }}</span>
-</label>
-<!-- end input -->
-{% endmacro %}

@@ -25,12 +25,22 @@ range.addEventListener('change', function(range) {
       document.getElementById('scrollVideo').value = '0';
     };
   }
-});
 
-$(document).on('click', function(hideVideo) {
-  if (!$(hideVideo.target).closest('.modal').length) {
-    $('.modal').fadeOut(500);
-    $('.carousel-wrap').fadeIn(1000);
+  if(+value !== maxValue) {
     document.getElementById('scrollVideo').value = '0';
   }
 });
+
+// jQuery(function($) {
+//   $(document).mouseup(function(e) { // событие клика по веб-документу
+//     var div = $('.modal'); // тут указываем ID элемента
+//     if (!div.is(e.target) // если клик был не по нашему блоку
+//         && div.has(e.target).length === 0)
+//     {
+//       div.fadeOut(500); // скрываем его
+//       $('.carousel-wrap').fadeIn(1000);
+//     }
+
+//   });
+
+// });

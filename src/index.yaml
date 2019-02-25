@@ -3,3 +3,5 @@ ProjectTitle: template
 PageList:
 - file: page.html
   ready: 50
+- file: contacts.html
+  ready: 50
