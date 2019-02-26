@@ -71,24 +71,25 @@
       </header>
       <!-- header block end -->
       <!-- hero block start -->
-      <main class="content">
-        <div class="video-wrap">
-          <div class="range">
-            <span class="range__text">Потяните</span>
-            <!--<div id="js-range"about='22' class="range__input"></div> -->
-            <input type="range" id="scrollVideo" class="range__input" value="0" />
-            <span class="range__text">для просмотра</span>
-          </div>
-          <div class="modal" id="modal" aria-hidden="true" aria-labelledby="modalTitle" aria-describedby="modalDescription" role="dialog">
-            <button class="close-button button-sprite" id="close-button"></button>
-            <div class="modal-guts" role="document">
-              <div class="video-wrapper video">
-                <video class="video__item" controls></video>
-                <div class="video-btn"></div>
-              </div>
+      <div class="video-wrap">
+        <div class="range">
+          <span class="range__text">Потяните</span>
+          <!-- <div id="js-range" data-r="er" class="range__input"></div> -->
+          <div id="slider-direction" class="range__input"></div>
+          <!-- <input type="range" id="scrollVideo"  value="0" /> -->
+          <span class="range__text">для просмотра</span>
+        </div>
+        <div class="modal" id="modal" aria-hidden="true" aria-labelledby="modalTitle" aria-describedby="modalDescription" role="dialog">
+          <button class="close-button button-sprite" id="close-button"></button>
+          <div class="modal-guts" role="document">
+            <div class="video-wrapper video">
+              <video class="video__item" controls></video>
+              <div class="video-btn"></div>
             </div>
           </div>
         </div>
+      </div>
+      <main class="content">
         <div class="hero-wrapper">
           <div class="carousel-wrap">
             <div class="js-slider slider row owl-carousel">

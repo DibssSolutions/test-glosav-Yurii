@@ -47,47 +47,134 @@
 
 .range
     display: flex
-    align-items: center
+    // align-items: center
     justify-content: center
-
+    position: relative
+    z-index: 0
 
 .range__input
-    -webkit-appearance: none
-    position: relative
-    height: 1px
-    width: 125px
-    z-index: 0
-    background-color: transparent
+    width: 101px
 
-.range__input:before
-    content: url(../img/border-range.png)
-    position: absolute
-    right: 18px
-    top: -11px
-.range__input::after
-    content: url(../img/slide-range2.png)
+.noUi-connects
+    border-top: 2px dotted #396f8c
+    border-radius: 0px
     position: absolute
     top: 50%
-    transform: translateY(-50%)
-    right: 3px
+    left: 50%
+    transform: translate(-50%, -10%)
+.noUi-handle
+    border: none
+    border-radius: 0
+    background: none
+    cursor: default
+    box-shadow: none
 
-.range__input::-webkit-slider-thumb
-    -webkit-appearance: none
-    appearance: none
+.noUi-connect
+    background: none
+.noUi-target
+    background: none
+    box-shadow: none
+    border-radius: 0px
+
+// .noUi-handle:after
+//     content: none
+
+// .noUi-handle:before
+//     content: none
+
+.noUi-handle-lower:before
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background-color: #f0f3f6
     width: 38px
     height: 38px
-    border: 0
-    background: url('../../img/slide-range.png')
+    border: 1px solid #396f8c
+    border-radius: 50%
     cursor: pointer
-    position: relative
     z-index: 1
 
+.noUi-handle-lower:after
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 4px
+    height: 4px
+    background: #396f8c
+    border-radius: 50%
+    cursor: pointer
+    z-index: 1
+
+[disabled] .noUi-handle
+    pointer-events: none
+    cursor: pointer
+.noUi-handle-upper:before
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background-color: #f0f3f6
+    width: 14px
+    height: 14px
+    border: 1px solid #396f8c
+    border-radius: 50%
+    cursor: pointer
+    z-index: 1
+
+.noUi-handle-upper:after
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 4px
+    height: 4px
+    background: #396f8c
+    border-radius: 50%
+    cursor: pointer
+    z-index: 1
+// .range__input
+//     -webkit-appearance: none
+//     position: relative
+//     height: 1px
+//     width: 125px
+//     z-index: 0
+//     background-color: transparent
+
+// .range__input:before
+//     content: url(../img/border-range.png)
+//     position: absolute
+//     right: 18px
+//     top: -11px
+// .range__input::after
+//     content: url(../img/slide-range2.png)
+//     position: absolute
+//     top: 50%
+//     transform: translateY(-50%)
+//     right: 3px
+
+// .range__input::-webkit-slider-thumb
+//     -webkit-appearance: none
+//     appearance: none
+//     width: 38px
+//     height: 38px
+//     border: 0
+//     background: url('../../img/slide-range.png')
+//     cursor: pointer
+//     position: relative
+//     z-index: 1
+
 .range__text
-    padding: 0 10px
+    padding: 0 20px
+    font-family: 'GothamPro'
     color: #396f8c
     font-size: 12px
-    font-weight: 500
+    font-weight: 600
     letter-spacing: 0.48px
+
+.range__text:first-child
+    padding-right: 30px
 
 .close-button
     background-image: url(../img/close-btn.png)
