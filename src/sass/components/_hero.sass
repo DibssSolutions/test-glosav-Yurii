@@ -48,9 +48,11 @@
 .range
     display: flex
     // align-items: center
-    justify-content: center
-    position: relative
-    z-index: 0
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    top: 20px
+    z-index: 1
 
 .range__input
     width: 101px
@@ -68,6 +70,18 @@
     background: none
     cursor: default
     box-shadow: none
+
+.noUi-handle-lower .noUi-touch-area
+    display: none
+.noUi-touch-area
+    height: 4px
+    width: 4px
+    background: #396f8c
+    border-radius: 50%
+    position: fixed
+    top: 0%
+    left: 0%
+    transform: translate(-65%,140%)
 
 .noUi-connect
     background: none
@@ -166,7 +180,7 @@
 //     z-index: 1
 
 .range__text
-    padding: 0 20px
+    padding: 0 0 0 20px
     font-family: 'GothamPro'
     color: #396f8c
     font-size: 12px
@@ -175,7 +189,7 @@
 
 .range__text:first-child
     padding-right: 30px
-
+    padding-left: 0
 .close-button
     background-image: url(../img/close-btn.png)
     background-repeat: no-repeat
@@ -223,7 +237,8 @@
     display: none
 
 .video-wrap
-    padding-top: 20px
+    position: relative
+    z-index: 1
     +md
         display: none
 .video video
