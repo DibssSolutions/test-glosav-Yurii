@@ -7,5 +7,5 @@ import './_slider';
 import './_blur';
 import './_modalSlider';
 import'./_noUIslider';
-import'./_monitoring';
-
+import'./monitoring/_monitoring';
+import'./monitoring/_sliderMonitoring';
