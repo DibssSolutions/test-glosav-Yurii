@@ -1,35 +1,28 @@
-.title_lg
-    color: #2c5b72
-    font-family: "GothamPro"
-    font-size: 50px
-    font-weight: 500
-
-.title_md
-    color: #2c5b72
-    font-family: "GothamPro"
-    font-size: 24px
-    font-weight: 500
-
-.title_sm
-    color: #2c5b72
-    font-family: "GothamPro"
-    font-size: 18px
-    font-weight: 500
-
-.title_xs
-    color: #2c5b72
-    font-family: "GothamPro"
-    font-size: 16px
-    font-weight: 500
-
 
 .monitoring
     font-family: "GothamPro"
+    height: 277px
+    padding-top: 30px
+
+.bg-monitoring
+    background-image: url(../img/monitoring-header.png)
+    position: absolute
+    width: 100%
+    height: 500px
+    background-repeat: no-repeat
+    top: 0
+    background-size: cover
+    background-position: 50% 50%
+.bg-gradient
+    position: absolute
+    width: 100%
+    top: 0
+    height: 450px
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 8%, rgba(255,255,255,0) 100%)
 
 .monitoring-wrapper
     max-width: 1124px
     position:  relative
-    margin-top: 30px
 
 .breadcrumbs
     display: flex
@@ -78,14 +71,6 @@
 .breadcrumbs__item span:before:hover
     color: #ee8a00
 
-.bg-gradient
-    position: absolute
-    width: 100%
-    top: 0
-    height: 400px
-    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 8%, rgba(255,255,255,0) 100%)
-
-
 .bg-monitoring img
     // background-image: url(../img/monitoring-header.png)
     position: absolute
@@ -97,38 +82,3 @@
 
 .monitoring-grad
     background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 8%, rgba(255,255,255,0) 100%)
-
-
-// hero-ask
-.hero-ask
-    background-color: #dee6eb
-    padding: 38px 115px 60px 115px
-    border-top: 4px solid #ee8a00
-    margin-top: 164px
-    &__title
-        text-align: center
-        margin-bottom: 25px
-    &__desc
-        // text-align: left
-        color: #396f8c
-        font-size: 14px
-        line-height: 22px
-
-.hero-ask__desc p
-    padding-bottom: 0px
-
-.hero-ask__desc p:last-child
-    padding-bottom: 0px
-
-.hero-ask__desc p:not(:first-child)
-    display: none
-
-
-.hero-ask__button
-    position: absolute
-    left: 50%
-    transform: translateX(-50%)
-    bottom: -32px
-
-.hero-ask__arrow
-    display: block

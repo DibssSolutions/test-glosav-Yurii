@@ -1,25 +1,95 @@
-// .slick-next
-//     position: absolute
-//     right: 0
-//     display: block
-//     background-image: url(../img/slider-right.png)
-//     background-repeat: no-repeat
-//     width: 100px
-//     height: 20px
+.monitoring-examples
+    padding-bottom: 87px
+    background-color: #eaeff2
 
 
-.slick-next:before
-    content: ""
+// hero-ask
+.hero-ask
+    background-color: #dee6eb
+    padding: 38px 115px 60px 115px
+    border-top: 4px solid #ee8a00
+    position: relative
+    margin-bottom: 85px
+    &__title
+        text-align: center
+        margin-bottom: 25px
+    &__desc
+        // text-align: left
+        color: #396f8c
+        font-size: 14px
+        line-height: 22px
+        font-family: "GothamPro"
+
+.hero-ask__desc p
+    padding-bottom: 0px
+
+.hero-ask__desc p:last-child
+    padding-bottom: 0px
+
+.hero-ask__desc p:not(:first-child)
+    display: none
+
+.hero-ask__button
     position: absolute
-    
+    left: 50%
+    transform: translateX(-50%)
+    bottom: -32px
 
+.hero-ask__arrow
+    display: block
 
-.sprite-Shape_4_copy_6
-    width: 60px
-    height: 9px
-    background-position: -5px -5px
+.monitoring-slider
+    &__title
+        margin-bottom: 40px
+    &__content
+            position: relative
+.slick-slide img
+    margin: 0 auto
 
-.sprite-Shape_4_copy_6-_1_
-    width: 60px
-    height: 9px
-    background-position: -75px -5px
+&.prev
+    position: absolute
+    left: -10px
+    z-index: 1
+    display: block
+    background-image: url(../img/slider-left.png)
+    background-repeat: no-repeat
+    width: 70px
+    height: 20px
+    top: calc(50% - 41px)
+    transform: translateY(-50%)
+    cursor: pointer
+
+&.prev:hover
+    background-position: -70px 0px
+
+&.next
+    position: absolute
+    right: -10px
+    z-index: 1
+    display: block
+    background-image: url(../img/slider-right.png)
+    background-repeat: no-repeat
+    width: 70px
+    height: 20px
+    top: calc(50% - 41px)
+    transform: translateY(-50%)
+    cursor: pointer
+
+&.next:hover
+    background-position: -70px 0px
+
+.monitoring__item
+    // position: relative
+
+.monitoring-item__title
+    max-width: 222px
+    margin: 0 auto
+    text-align: center
+    margin-top: 38px
+    cursor: pointer
+    transition: 0.3s
+    &:hover
+        color: #ee8a00
+
+.monitoring-slider__btn
+    margin-top: 40px    
