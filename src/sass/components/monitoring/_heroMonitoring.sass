@@ -3,7 +3,15 @@
     font-family: "GothamPro"
     height: 277px
     padding-top: 30px
-
+    padding: 0 20px
+    +md
+        padding-top: 18px
+        background-color: #eaeff2
+        padding-bottom: 18px
+        height: auto
+    &__title
+        +md
+            font-size: 30px
 .bg-monitoring
     background-image: url(../img/monitoring-header.png)
     position: absolute
@@ -13,19 +21,37 @@
     top: 0
     background-size: cover
     background-position: 50% 50%
+    +md
+        background-image: none
+        position: static
+        height: auto
 .bg-gradient
     position: absolute
     width: 100%
     top: 0
     height: 450px
     background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 8%, rgba(255,255,255,0) 100%)
-
+    +md
+        background: none
+        height: auto
+        position: static
+.bg-img
+    display: none
+    width: 100%
+    margin: auto
+    +md
+        display: block
 .monitoring-wrapper
     max-width: 1124px
     position:  relative
 
+
 .breadcrumbs
     display: flex
+    +md
+        flex-direction: column
+        max-width: 188px
+
     &__item
         color: #7fa4bc
         font-size: 12px
@@ -34,10 +60,38 @@
         position: relative
         cursor: pointer
         transition: 0.3s
+        +md
+            display: none
+            background-color: #ffffff
+            padding: 6px 12px 6px 12px
+            max-width: 188px
+            margin-right: 0
     &__item a
         color: #2e5b72
         font-size: 12px
         text-decoration: underline
+    & .menu-doots
+        +md
+            width: 22px
+            height: 15px
+            position: relative
+            display: flex
+            cursor: pointer
+            align-items: center
+            justify-content: space-between
+            margin-bottom: 7px
+    & .menu-doots span
+        +md
+            display: block
+            height: 4px
+            width:  4px
+            background-color: #95bed5
+            opacity: 1
+            transform: rotate(0deg)
+            border-radius: 50%
+            transition: .4s
+
+
 
 .breadcrumbs__item a:hover
     color: #ee8a00
@@ -53,7 +107,8 @@
     width: 4px
     height: 4px
     background-color: #95bed5
-
+    +md
+        content: none
 .breadcrumbs__item span:before
     content: ""
     position: absolute
@@ -64,6 +119,8 @@
     width: 4px
     height: 4px
     background-color: #95bed5
+    +md
+        content: none
 
 .breadcrumbs__item:hover
     color: #ee8a00
@@ -71,14 +128,51 @@
 .breadcrumbs__item span:before:hover
     color: #ee8a00
 
-.bg-monitoring img
-    // background-image: url(../img/monitoring-header.png)
-    position: absolute
-    width: 100%
-    object-fit: cover
-    height: 450px
-    top: 0
-    z-index: -1
+.breadcrumbs.menu_stage_open .breadcrumbs__item
+    +md
+        display: block
+
+.breadcrumbs.menu_stage_open .breadcrumbs__item a
+    +md
+        display: block
+
+.breadcrumbs__item a
+    +md 
+        display: none
+
+.menu-doots span:nth-child(1)
+    +md
+        top: 0px
+
+.menu-doots span:nth-child(2), .menu-doots span:nth-child(3)
+    +md
+        top: 13px
+
+.breadcrumbs.menu_stage_open .menu-doots span:nth-child(1)
+    +md
+        top: 0px;
+        width: 2px;
+        height: 15px;
+        position: absolute;
+        left: 40%;
+        transform: rotate(45deg);
+        border-radius: 0
+
+
+.breadcrumbs.menu_stage_open .menu-doots span:nth-child(2)
+    +md
+        width: 0%
+        transition: none
+
+.breadcrumbs.menu_stage_open .menu-doots span:nth-child(3)
+    +md
+        top: 0px;
+        width: 2px;
+        height: 15px;
+        position: absolute;
+        left: 40%;
+        transform: rotate(-45deg);
+        border-radius: 0
 
 .monitoring-grad
     background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 8%, rgba(255,255,255,0) 100%)

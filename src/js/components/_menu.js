@@ -10,4 +10,16 @@ $(document).on('click', function(hideMenu) {
   }
 });
 
+$(function() {
+  $('.menu-doots').on('click', function() {
+    $(this).closest('.breadcrumbs').toggleClass('menu_stage_open');
+  });
+});
+
+$(document).on('click', function(hideMenu) {
+  if (!$(hideMenu.target).closest('.breadcrumbs').length) {
+    $('.breadcrumbs').removeClass('menu_stage_open');
+  }
+});
+
 

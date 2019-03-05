@@ -9,4 +9,5 @@ import './_modalSlider';
 import'./_noUIslider';
 import'./monitoring/_monitoring';
 import'./monitoring/_sliderMonitoring';
-import'./monitoring/_partnersPopUps.js';
+import'./monitoring/_monitoringModal.js';
+import './monitoring/_select';
