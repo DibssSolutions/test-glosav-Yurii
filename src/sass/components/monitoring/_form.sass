@@ -10,18 +10,74 @@
     display: flex
     +md
         flex-direction: column-reverse
-    
-.form
-    &__select
-        position: relative
-    & form
+    & .request
+        flex-direction: column
+        &__title
+            margin-bottom: 40px
+        &__desc
+            color: #396f8c
+            font-family: "GothamPro"
+            font-size: 14px
+            font-weight: 400
+            line-height: 22px
+            line-height: 30px
+    & .form-content
         width: 100%
-.select2-search
-    display: none
+    & .form__input
+        width: 100%
+        border-radius: 24px
+        background-color: #cbd9e1
+        padding: 19px 0px 19px 25px
+        margin-bottom: 37px
+    & .form__input::-webkit-input-placeholder
+        opacity: 1
+        color: #396f8c
+        font-family: "GothamPro"
+        font-size: 14px
+        font-weight: 400
+        letter-spacing: 0.28px
+    & .form-select
+        & option
 
-.select2-selection 
-    display: block
+
 
 .select2-selection__rendered
     display: block
     width: 100%
+    border-radius: 24px
+    background-color: #cbd9e1
+    padding: 19px 0px 19px 25px
+    margin-bottom: 37px
+    position: relative
+    z-index: 1
+
+.select2-search__field
+    visibility: hidden
+
+.select2-results__options
+    padding: 20px 0 1px 25px
+    width: 100%!important
+    display: block
+    margin-top: 18px
+    position: relative
+    z-index: 2
+
+.select2-results
+    display: block
+    width: 100%
+    background-color: #cbd9e1
+    border-radius: 24px
+    border-top-left-radius: 0
+    border-top-right-radius: 0
+
+.select2-results__option, .select2-selection__rendered
+    opacity: 1
+    color: #396f8c
+    font-family: "GothamPro"
+    font-size: 14px
+    font-weight: 400
+    letter-spacing: 0.28px
+
+.select2-results__option
+    margin-bottom: 25px
+
