@@ -14,7 +14,7 @@ $(function() {
     }
   };
   $('.showModal').on('click', function(e) {
-    var id = $(this).data('id');
+    var id = $(this).data('item-id');
     var content = $('#modal'+id).html();
     modal.showModal(content);
     $('body').addClass('overflow');

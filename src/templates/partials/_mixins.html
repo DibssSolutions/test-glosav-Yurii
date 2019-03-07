@@ -20,3 +20,37 @@
 </ul>
 <!-- end breadcrumbs -->
 {% endmacro %}
+
+{% macro herobg(items) %}
+<div class="bg-monitoring" style="background-image: url(img/{{items.img}})">
+  <div class="bg-gradient"></div>
+  {% if items.img %}
+  <img src="img/{{items.img}}" class="bg-img" alt="bg">
+  {% endif %}
+</div>
+<div class="monitoring">
+  <div class="monitoring-wrapper wrapper">
+    {% if items.title %}
+    <h1 class="monitoring__title title_lg">{{items.title}}</h1>
+    {% endif %}
+    <ul class="breadcrumbs">
+      <div class="menu-doots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      {% for item in items.list %}
+      {% if loop.last %}
+      <li class="breadcrumbs__item">
+        <span>{{ item }}</span>
+      </li>
+      {% else %}
+      <li class="breadcrumbs__item">
+        <a href="#">{{ item }}</a>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endmacro %}

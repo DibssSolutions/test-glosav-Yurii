@@ -1,3 +1,4 @@
+
 $(function() {
   const modalContent = $('.content-modal');
 
@@ -53,4 +54,3 @@ modalContent.each(function(index, elem) {
 $('.item').click(function() {
 
 });
-
