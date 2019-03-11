@@ -1,0 +1,28 @@
+.contact-section
+    color: #396f8c
+    font-family: "GothamPro"
+    font-size: 14px
+    font-weight: 400
+    background-color: #dee6eb
+    padding: 35px 20px
+    &:nth-child(even)
+        background-color: transparent
+    &__title
+        margin-bottom: 30px
+        +md
+            font-size: 20px
+    & .contact
+        display: flex
+        justify-content: space-between
+        +md
+            flex-direction: column
+    & .contact__item h3
+        padding-bottom: 15px
+    & .contact__item
+        max-width: 355px
+        +md
+            margin-bottom: 25px
+            &:last-child
+                margin-bottom: 0
+        & span
+            margin-right: 10px

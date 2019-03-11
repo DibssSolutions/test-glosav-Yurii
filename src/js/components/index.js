@@ -11,3 +11,5 @@ import'./monitoring/_monitoring';
 import'./monitoring/_sliderMonitoring';
 import'./monitoring/_monitoringModal.js';
 import './monitoring/_select';
+import './promo/_promo';
+import './contacts/contacts';
