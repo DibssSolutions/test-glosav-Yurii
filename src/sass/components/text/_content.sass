@@ -1,0 +1,48 @@
+.content-start
+    margin-top: 65px
+    margin-bottom: 45px
+    display: flex
+    +md
+        margin-top: 0
+    &-left
+        padding-right: 73px
+        +md
+            padding-right: 0px
+        &__title
+            margin-bottom: 30px
+            +md
+                font-size: 20px
+        &__img
+            display: none
+            +md
+                display: block
+                max-width: 100%
+                margin: auto
+                margin-bottom: 30px
+        &__desc
+            color: #396f8c
+            font-size: 14px
+            font-weight: 400
+            line-height: 22px
+        & .content-start-features
+            margin-top: 25px
+            &-list
+                margin-top: 5px
+                &__item
+                    position: relative
+                    padding: 5px 0
+                    padding-left: 30px
+                    &:before
+                        content: ""
+                        position: absolute
+                        top: 50%
+                        transform: translateY(-50%)
+                        left: 12px
+                        width: 6px
+                        height: 6px
+                        background-color: #f58220
+                        border-radius: 50%
+    &-right
+        &__img
+            +md
+                display: none

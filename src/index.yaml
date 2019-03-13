@@ -12,4 +12,6 @@ PageList:
 - file: news.html
   ready: 90
 - file: text.html
+  ready: 90
+- file: directions.html
   ready: 50
