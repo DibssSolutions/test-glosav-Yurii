@@ -1,4 +1,4 @@
-if (document.querySelector('.monitoring, .promo-hero')) {
+if (document.querySelector('.monitoring, .promo-hero, .introduction-hero')) {
   $('.out').css('background', 'none');
   $('body').css('overflow', 'auto');
   $('footer').css('background', '#dee6eb');

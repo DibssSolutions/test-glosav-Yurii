@@ -2,10 +2,16 @@
     display: flex
     flex-wrap: wrap
     justify-content: space-between
-    // margin: 0 -60px
+    margin: 0 -60px
+    margin-right: 0
     margin-top: 50px
+    +md
+        margin-top: 0
     &__item
-        // padding: 0 50px
+        padding: 0 50px
+        margin-bottom: 50px
+        +md
+            padding-right: 0
     &__img
         display: block
         max-width: 100%
@@ -22,3 +28,28 @@
     &__btn
         margin: 0
         margin-bottom: 35px
+    &-list
+        &__item
+            position: relative
+            padding-left: 16px
+            color: #7fa4bc
+            font-size: 16px
+            font-weight: 500
+            transition: 0.3s
+            cursor: pointer
+            margin-bottom: 18px
+            &:before
+                content: ""
+                position: absolute
+                width: 6px
+                height: 6px
+                background-color: #95bed5
+                border-radius: 50%
+                top: 50%
+                transform: translateY(-50%)
+                left: 0
+                transition: 0.3s
+            &:hover
+                color: #dd7500
+            &:hover:before
+                background-color: #dd7500
