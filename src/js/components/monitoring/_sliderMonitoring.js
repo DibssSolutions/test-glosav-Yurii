@@ -5,7 +5,7 @@ var settings = {
   speed: 300,
   slidesToShow: 4,
   slidesToScroll: 1,
-  prevArrow: $('.prev'),
+  prevArrow: $('.p'),
   nextArrow: $('.next'),
   responsive: [
     {

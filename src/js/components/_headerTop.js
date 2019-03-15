@@ -1,8 +1,3 @@
-// $(function() {
-//   $('.lang').on('click', function() {
-//     $('.lang-list').toggle();
-//   });
-// });
 
 $('.lang').click(function() {
   $('.lang-list').toggle();
@@ -23,4 +18,9 @@ $(document).on('click', function(hideLang) {
     // $('.yura').hide();
   }
 });
+
+if (document.querySelector('.promo-hero, .introduction-hero, .monitoring-hero')) {
+  $('header').toggleClass('header_absolute');
+  $('footer').css('background-color', '#eaeff2');
+}
 

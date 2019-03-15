@@ -1,7 +1,7 @@
 
 // $( 'body' ).find( '.out' ).css( 'background-color', 'red' );
-if (document.querySelector('.monitoring')) {
-  $('.out').css('background', 'none');
+if (document.querySelector('.monitoring-hero')) {
+  // $('.out').css('background', 'none');
   $('body').css('overflow', 'auto');
   $('footer').css('background', '#dee6eb');
 }

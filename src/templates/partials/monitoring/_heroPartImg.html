@@ -1,16 +1,9 @@
-<div class="test">
-<div class="bg-monitoring">
-<div class="bg-gradient"></div>
-<img src="img/monitoring-header.png" class="bg-img" alt="bg">
-</div>
-<div class="monitoring">
-    <div class="monitoring-wrapper wrapper">
-      <h1 class="monitoring__title title_lg">Мониторинг транспорта</h1>
-      {{
-      mixins.breadcrumbs({
+<div class="monitoring-hero">
+    {{
+      mixins.herobg({
+      title: ["Мониторинг транспорта"],
+      img: 'monitoring.png',
       list: ["Главная", "Направления", "Мониторинг транспорта"]
       })
       }}
-    </div>
-  </div>
-  </div>
+</div>

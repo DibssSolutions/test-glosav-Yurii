@@ -1,7 +1,7 @@
-if (document.querySelector('.monitoring, .promo-hero, .introduction-hero')) {
-  $('.out').css('background', 'none');
+if (document.querySelector('.monitoring, .promo-hero, .introduction')) {
+  $('.out').css('background', '#eaeff2');
   $('body').css('overflow', 'auto');
-  $('footer').css('background', '#dee6eb');
+  $('footer').css('background', '#eaeff2');
 }
 else{
   $('.out').find('.bg-gradient').remove();
