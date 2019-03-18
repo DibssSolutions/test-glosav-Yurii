@@ -2,8 +2,6 @@
 $(function() {
   var modal ={
     self: $('#modalWindow'),
-      
-  
     showModal:function(content) {
       this.self.find('#innerModal').html(content);
       this.self.fadeIn(500);

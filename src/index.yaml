@@ -14,6 +14,12 @@ PageList:
 - file: text.html
   ready: 90
 - file: directions.html
-  ready: 100
+  ready: 90
 - file: introduction.html
-  ready: 50
+  ready: 90
+- file: products.html
+  ready: 90
+- file: integration.html
+  ready: 90
+- file: company.html
+  ready: 90

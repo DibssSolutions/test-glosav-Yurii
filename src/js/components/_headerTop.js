@@ -11,11 +11,10 @@ $(document).on('click', function(hideLang) {
 });
 
 $('.find-arrow').click(function() {
-  $('.yura').toggle();
+  $('.none').toggle();
 });
 $(document).on('click', function(hideLang) {
   if (!$(hideLang.target).closest('.find-block').length) {
-    // $('.yura').hide();
   }
 });
 

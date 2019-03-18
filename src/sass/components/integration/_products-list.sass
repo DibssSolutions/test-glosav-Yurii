@@ -1,0 +1,30 @@
+.products-wrapper
+    margin-top: 50px
+    +md
+        margin: 0
+.products-list
+    padding: 35px 20px
+    &:nth-child(even)
+        background-color: #dee6eb
+    & .products-block
+        display: flex
+        +md
+            flex-direction: column
+        &__img
+            margin-right: 80px
+            +md
+                margin-right: 0
+                margin-bottom: 25px
+        &__img img
+            display: block
+        & .products-block-desc
+            &__title
+                margin-bottom: 25px
+            &__text
+                color: #396f8c
+                font-size: 14px
+                font-weight: 400
+                line-height: 22px
+                margin-bottom: 25px
+            &__btn
+                margin: 0

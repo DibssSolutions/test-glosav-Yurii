@@ -1,6 +1,6 @@
 import 'select2';
 
-if (document.querySelector('.monitoring')) {
+if (document.querySelector('.monitoring-hero')) {
 
   $('.js-select').select2({
     width: '100%',
@@ -14,6 +14,3 @@ if (document.querySelector('.monitoring')) {
   });
   
 }
-
-
-
