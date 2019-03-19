@@ -21,17 +21,18 @@
 <!-- end breadcrumbs -->
 {% endmacro %}
 
+
 {% macro herobg(items) %}
-<div class="bg-monitoring" style="background-image: url(img/{{items.img}})">
-   <div class="bg-gradient"></div>
+<div class="bg-hero" style="background-image: url(img/{{items.img}})">
+  <div class="bg-gradient"></div>
   {% if items.img %}
   <img src="img/{{items.img}}" class="bg-img" alt="bg">
   {% endif %}
 </div>
 <div class="wrap">
-  <div class="monitoring-wrapper wrapper">
+  <div class="content-wrapper wrapper">
     {% if items.title %}
-    <h1 class="monitoring__title title_lg">{{items.title}}</h1>
+    <h1 class="bg-hero__title title_lg">{{items.title}}</h1>
     {% endif %}
     <ul class="breadcrumbs">
       <div class="menu-doots">
@@ -52,5 +53,46 @@
       {% endfor %}
     </ul>
   </div>
+</div>
+{% endmacro %}
+
+
+{# for products #}
+
+{% macro product(items) %}
+<div class="products-block" style="background-image: url(img/{{items.img}})">
+  {% if items.title %}
+  <h2 class="products-block__title title_md">{{items.title}}</h2>
+  {% endif %}
+</div>
+{% endmacro %}
+
+{# for directions #}
+
+{% macro directions(items) %}
+<div class="directions-block__item">
+  <div>
+    {% if items.img %}
+    <img src="img/{{items.img}}" class="directions-block__img" alt="directions">
+    {% endif %}
+  </div>
+  {% if items.title %}
+  <h2 class="directions-block__title title_md">{{items.title}}</h2>
+  {% endif %}
+  {% if items.desc %}
+  <p class="directions-block__desc">{{items.desc}}</p>
+  {% endif %}
+  {% if items.btn %}
+  <button class="directions-block__btn button_border-blue">{{items.btn}}</button>
+  {% endif %}
+  <ul class="directions-block-list">
+    {% for item in items.list %}
+    {% if items.list %}
+    <li class="directions-block-list__item">
+      <span>{{ item }}</span>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
 </div>
 {% endmacro %}

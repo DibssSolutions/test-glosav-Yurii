@@ -1,32 +1,36 @@
 <div class="content-wrapper wrapper">
   <div class="products-items">
     <div class="items-wrapper">
-      <div class="products-block products-block_bg-one">
-        <h2 class="products-block__title title_md">
-          Мониторинг и тахография
-        </h2>
-      </div>
+      {{
+        mixins.product({
+        title: ["Мониторинг и тахография"],
+        img: 'product1.png'
+        })
+        }}
     </div>
     <div class="items-wrapper">
-      <div class="products-block products-block_bg-two">
-        <h2 class="products-block__title title_md">
-          Системная интеграция
-        </h2>
-      </div>
+      {{
+        mixins.product({
+        title: ["Системная интеграция"],
+        img: 'product2.png'
+        })
+        }}
     </div>
     <div class="items-wrapper">
-      <div class="products-block products-block_bg-one">
-        <h2 class="products-block__title title_md">
-          Мониторинг и тахография
-        </h2>
-      </div>
+      {{
+        mixins.product({
+        title: ["ИТС"],
+        img: 'product3.png'
+        })
+        }}
     </div>
     <div class="items-wrapper">
-      <div class="products-block products-block_bg-one">
-        <h2 class="products-block__title title_md">
-          Мониторинг и тахография
-        </h2>
-      </div>
+      {{
+        mixins.product({
+        title: ["Разработка ПО"],
+        img: 'product4.png'
+        })
+        }}
     </div>
   </div>
 </div>

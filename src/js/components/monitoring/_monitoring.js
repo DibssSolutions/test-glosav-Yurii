@@ -1,5 +1,5 @@
 if (document.querySelector('.monitoring-hero')) {
-  $('body').css('overflow', 'auto');
+  // $('body').css('overflow', 'auto');
   $('footer').css('background', '#dee6eb');
 }
 $('.hero-ask__button').click(function() {

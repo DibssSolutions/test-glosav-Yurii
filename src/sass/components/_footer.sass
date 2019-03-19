@@ -1,6 +1,6 @@
 /* footer */
 footer
-    padding: 0 35px
+    padding: 0 20px
     height: 10vh
     +md
         height: auto
@@ -17,102 +17,56 @@ footer
         padding: 0
         flex-direction: column-reverse
         font-size: 13px
+    &__copy
+        padding-right: 30px
 
-
-
-.footer-block span:hover
-    opacity: 0.5
-    cursor: pointer
 .address
     display: flex
+    +md
+        flex-direction: column-reverse
     &__item
         margin-right: 60px
         position: relative
         display: flex
         align-items: center
+        cursor: pointer
+        font-size: 14px
         +md
             margin-right: 0
-            margin-bottom: 20px
-    +md
-        flex-direction: column-reverse
-
-.address__item:last-child
-    margin-right: 0
-
-.phone__desc
-
-.phone__desc
-    background-image: url(/img/phone-footer.png)
-    background-repeat: no-repeat
-    display: block
-    cursor: pointer
-
-.sprite-phone
-    width: 17px
-    height: 17px
-    background-position: -5px -5px
-    position: absolute
-    width: 17px
-    height: 17px
-    left: -23px
-    top: 50%
-    transform: translateY(-50%)
-
-.r:hover .sprite-phone
-    background-position: -31px -5px
-
-.r:hover span
-    opacity: 0.5
-    cursor: pointer
-
-.email__desc
-    background-image: url(/img/email-footer.png)
-    background-repeat: no-repeat
-    display: block
-    cursor: pointer
-
-.sprite-email
-    width: 17px
-    height: 17px
-    background-position: -10px -10px
-    position: absolute
-    width: 17px
-    height: 17px
-    left: -23px
-    top: 50%
-    transform: translateY(-45%)
-
-.q:hover .sprite-email
-    background-position: -47px -10px
-
-.q:hover span
-    opacity: 0.5
-    cursor: pointer
-
-.address__desc
-    background-image: url(/img/addres-footer.png)
-    background-repeat: no-repeat
-    display: block
-    cursor: pointer
-
-.sprite-address
-    width: 17px
-    height: 17px
-    background-position: -10px -10px
-    position: absolute
-    width: 17px
-    height: 17px
-    left: -23px
-    top: 50%
-    transform: translateY(-55%)
-
-.w:hover .sprite-address
-    background-position: -44px -10px
-
-.w:hover span
-    opacity: 0.5
-    cursor: pointer
-
-.copy
-    +md
-        margin: 0 0 10px -20px
+            margin-bottom: 5px
+            font-size: 13px
+        &:last-child
+            margin-right: 0
+    &__item
+        &:hover span
+            opacity: 0.5
+    &__ico_map:hover:before
+        content: ""
+        background-image: url(../img/addres-footer.png) 
+        background-position: -42px 0px
+    &__ico_email:hover:before
+        content: ""
+        background-image: url(../img/email-footer.png) 
+        background-position: -45px 0px
+    &__ico_phone:hover:before
+        content: ""
+        background-image: url(../img/phone-footer.png) 
+        background-position: -29px 0px
+    &__ico_map:before
+        content: ""
+        background-image: url(../img/addres-footer.png) 
+        width: 25px
+        height: 38px
+        background-position: -8px 0px
+    &__ico_email:before
+        content: ""
+        background-image: url(../img/email-footer.png) 
+        width: 30px
+        height: 35px
+        background-position: -8px 0px
+    &__ico_phone:before
+        content: ""
+        background-image: url(../img/phone-footer.png) 
+        width: 28px
+        height: 27px
+        background-position: -3px 0
