@@ -2,4 +2,5 @@ if (document.querySelector('.contact, .content-start, .directions, .products-ite
   
   $('.out').css('background', '#eaeff2');
   $('.bg-gradient, .bg-monitoring').css('height', 'auto');
+  $('.bg-hero').removeClass();
 }

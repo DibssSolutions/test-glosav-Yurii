@@ -1,5 +1,9 @@
+.news
+    &__title
+        margin-top: 25px
 .news-wrapper
     max-width: 1149px
+    margin-top: 20px
 .news-flex
     // display: grid
     // grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -7,7 +11,7 @@
     display: flex
     flex-wrap: wrap
     width: 100%
-    margin-top: 65px
+    margin-top: 10px
     +md
         margin-top: 35px
     +sm
@@ -57,6 +61,8 @@
         position: absolute
         bottom: 0
         transition: 0.3s
+        +sm
+            padding-bottom: 5px
         &:hover
             color: #f58220
     & .item-relative
@@ -99,6 +105,102 @@
         & h2
             max-width: 357px
         & button
-
             bottom: 10px
             right: 0px
+
+.news__select
+    display: flex
+    justify-content: flex-end
+    margin: 0 10px
+
+.news .select2-selection__placeholder
+    opacity: 1
+    color: #396f8c
+    font-family: "GothamPro"
+    font-size: 14px
+    font-weight: 400
+    letter-spacing: 0.28px
+    border-bottom: 1px dotted #9ab5c6
+
+.news .select2-container
+    display: block
+
+
+.news .select2-container--default .select2-selection--single
+    border: none
+    background-color: transparent
+    border-radius: 20px
+    padding: 6px 0
+    display: block
+    position: relative
+
+.news .select2-container--default .select2-selection--single .select2-selection__rendered
+    color: #396f8c
+    opacity: 0.7
+
+.news .select2-container .select2-selection--single .select2-selection__rendered
+    display: block
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+    cursor: pointer
+
+
+.news .select2-container--default .select2-selection--single .select2-selection__arrow
+    height: 40px
+    right: 5px
+
+
+.news-select .select2-search--dropdown
+    display: none
+
+
+.news-select .select2-container--open .select2-dropdown--below
+    overflow: hidden
+    background-color: #e4e5e5
+    border: none
+    display: block
+
+.select2-results__options
+    padding: 5px 20px
+
+.news-select .select2-results__option
+    opacity: .7
+    color: #2c5b72
+    font-family: "GothamPro"
+    font-size: 14px
+    letter-spacing: 0.28px
+    padding-top: 5px
+    padding-bottom: 5px
+    cursor: pointer
+    &:hover
+        color: #f58220
+
+.news-select .select2-container--default .select2-results__option[aria-selected=true]
+    background-color: transparent
+    color: #2c5b72
+
+.news-select .select2-container--default .select2-results__option--highlighted[aria-selected]
+
+
+.news-select .select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple
+    border-bottom-left-radius: 0
+    border-bottom-right-radius: 0
+
+.news-select .select2-container--default .select2-selection--single .select2-selection__arrow b
+    border-style: solid
+    border-color: #2c5b72
+    border-width: 2px 2px 0 0
+    content: '';
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transition: 0.3s
+    transform: rotate(135deg) translateY(100%);
+
+.news-select .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b
+    transform: rotate(-45deg);
+    right: 5px
+    top: 46%
