@@ -1,8 +1,7 @@
-.content
+.hero
     min-height: 80vh
     overflow: hidden
     position: relative
-    font-family: 'GothamPro'
 
 .hero-wrapper
     position: absolute
@@ -14,243 +13,8 @@
         top: 0
         left: 0
         transform: translate(0%, 0%)
-.modal
-    position: fixed
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-    width: 1042px
-    height: 587px
-    max-width: 100%
-    max-height: 100%
-    z-index: 1010
-    display: none
 
-.modal-guts
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-
-.closed
-    display: flex
-
-.modal .close-button 
-    position: absolute
-    z-index: 1
-    top: 10px
-    top: 0px
-    right: -110px
-
-.range
-    display: flex
-    // align-items: center
-    position: absolute
-    left: 50%
-    transform: translateX(-50%)
-    top: 20px
-    z-index: 1
-
-.range__input
-    width: 101px
-
-.noUi-connects
-    border-top: 2px dotted #396f8c
-    border-radius: 0px
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -10%)
-.noUi-handle
-    border: none
-    border-radius: 0
-    background: none
-    cursor: default
-    box-shadow: none
-
-.noUi-handle-lower .noUi-touch-area
-    display: none
-.noUi-touch-area
-    height: 4px
-    width: 4px
-    background: #396f8c
-    border-radius: 50%
-    position: fixed
-    top: 0%
-    left: 0%
-    transform: translate(-65%,140%)
-
-.noUi-connect
-    background: none
-.noUi-target
-    background: none
-    box-shadow: none
-    border-radius: 0px
-    cursor: pointer
-
-// .noUi-handle:after
-//     content: none
-
-// .noUi-handle:before
-//     content: none
-
-.noUi-handle-lower:before
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-    background-color: #f0f3f6
-    width: 38px
-    height: 38px
-    border: 1px solid #396f8c
-    border-radius: 50%
-    cursor: pointer
-    z-index: 1
-
-.noUi-handle-lower:after
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-    width: 4px
-    height: 4px
-    background: #396f8c
-    border-radius: 50%
-    cursor: pointer
-    z-index: 1
-
-[disabled] .noUi-handle
-    pointer-events: none
-    cursor: pointer
-.noUi-handle-upper:before
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-    background-color: #f0f3f6
-    width: 14px
-    height: 14px
-    border: 1px solid #396f8c
-    border-radius: 50%
-    cursor: pointer
-    z-index: 1
-
-.noUi-handle-upper:after
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-    width: 4px
-    height: 4px
-    background: #396f8c
-    border-radius: 50%
-    cursor: pointer
-    z-index: 1
-// .range__input
-//     -webkit-appearance: none
-//     position: relative
-//     height: 1px
-//     width: 125px
-//     z-index: 0
-//     background-color: transparent
-
-// .range__input:before
-//     content: url(../img/border-range.png)
-//     position: absolute
-//     right: 18px
-//     top: -11px
-// .range__input::after
-//     content: url(../img/slide-range2.png)
-//     position: absolute
-//     top: 50%
-//     transform: translateY(-50%)
-//     right: 3px
-
-// .range__input::-webkit-slider-thumb
-//     -webkit-appearance: none
-//     appearance: none
-//     width: 38px
-//     height: 38px
-//     border: 0
-//     background: url('../../img/slide-range.png')
-//     cursor: pointer
-//     position: relative
-//     z-index: 1
-
-.range__text
-    padding: 0 0 0 20px
-    font-family: 'GothamPro'
-    color: #396f8c
-    font-size: 12px
-    font-weight: 600
-    letter-spacing: 0.48px
-
-.range__text:first-child
-    padding-right: 30px
-    padding-left: 0
-.close-button
-    background-image: url(../img/close-btn.png)
-    background-repeat: no-repeat
-    display: block
-    background-color: transparent
-
-.close-button:before
-    content: url(../img/close.svg)
-    position: absolute
-    transform: translate(-50%, -50%)
-    top: 50%
-    left: 50%
-
-.button-sprite
-    width: 64px
-    height: 64px
-    background-position: -5px -5px
-
-
-.button-sprite:hover
-    width: 64px
-    height: 64px
-    background-position: -79px -5px
-
-
-.video
-    position: relative
-
-.video-btn
-    content: url(../img/play-btn.png)
-    color: #fff
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-    cursor: pointer
-    z-index: 4
-    +sm
-        width: 60px
-        height: 60px
-    +sm:hover
-        background-color: black
-
-.video video::-webkit-media-controls-panel
-    display: none
-
-.video-wrap
-    position: relative
-    z-index: 1
-    +md
-        display: none
-.video video
-    width: 100%
-    height: 100%
-    border-radius: 8px
-    position: relative
-    z-index: 3
-
-.slider-wrapper
-    margin-top: 200px
-
-.item img
+.slider__img img
     // width: 360px
     // margin: 0 auto
     border: 2px solid #53788b
@@ -261,7 +25,7 @@
     +md
         padding: 5px
 
-.slider__img:hover
+.slider__img img:hover
     border: 2px solid transparent
     box-sizing: border-box
 
@@ -280,10 +44,10 @@
         margin-bottom: 30px
 
 
-.slider-img
+.slider__img
     position: relative
     transition: 0.5s
-.slider-img:before
+.slider__img:before
     content: url(../img/border-line-top.svg)
     position: absolute
     top: 50%;
@@ -294,7 +58,7 @@
     transition: 0.5s
     // z-index: -1
 
-.slider-img:after
+.slider__img:after
     content: url(../img/border-line-bottom.svg)
     position: absolute
     top: 50%
@@ -305,7 +69,7 @@
     opacity: 0
     // z-index: -1
 
-.slider-img:hover:before
+.slider__img:hover:before
     content: url(../img/border-line-top.svg)
     visibility: visible
     opacity: 1
@@ -314,7 +78,7 @@
     +md
         display: none
 
-.slider-img:hover:after
+.slider__img:hover:after
     content: url(../img/border-line-bottom.svg)
     visibility: visible
     transition: 0.5s
@@ -323,7 +87,7 @@
     +md
         display: none
 
-.slider__img
+.slider__img img
     cursor: pointer
     +md
         max-width: 100%
@@ -363,147 +127,3 @@
         padding-top: 15px
         max-width: 100px
         margin: 0 auto
-.orange
-    color: orange
-
-
-.d-block
-    display: block
-
-.row
-  display: flex
-  flex-wrap: wrap
-//   margin-left: -10px
-  margin-right: -10px
-
-
-.col-1 
-  width: 8.333333%
-
-.col-2 
-  width: 16.666667%
-
-
-.col-3
-  width: 25%
-  +md
-    width: auto
-
-.col-4 
-  width: 33.333333%
-
-.col-5 
-  width: 41.666667%
-
-.col-6 
-  width: 50%
-  +md
-    width: 100%
-
-.col-7 
-  width: 58.333333%
-
-.col-8
-  width: 66.666667%
-
-
-.col-9 
-  width: 75%
-
-
-.col-10 
-  width: 83.333333%
-
-
-.col-11 
-  width: 91.666667%
-
-
-.col-12 
-  width: 100%
-
-
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-sm-6
-  display: flex
-  padding-left: 10px
-  padding-right: 10px
-  box-sizing: border-box
-
-+md
-  .col-sm-1
-    width: 8.333333%
-
-  .col-sm-2
-    width: 16.666667%
-
-  .col-sm-3
-    width: 25%
-
-  .col-sm-4
-    width: 33.333333%
-
-  .col-sm-5
-    width: 41.666667%
-
-  .col-sm-6
-    width: 50%
-
-  .col-sm-7
-    width: 58.333333%
-
-  .col-sm-8
-    width: 66.666667%
-
-  .col-sm-9
-    width: 75%
-
-  .col-sm-10
-    width: 83.333333%
-
-  .col-sm-11
-    width: 91.666667%
-
-  .col-sm-12
-    width: 100%
-+sm
-    .col-xs-1 
-        width: 8.333333%
-
-    .col-xs-2
-        width: 16.666667%
-
-
-    .col-xs-3
-        width: 25%
-
-    .col-xs-4 
-        width: 33.333333%
-
-    .col-xs-5
-        width: 41.666667%
-
-    .col-xs-6 
-        width: 50%
-
-
-    .col-xs-7 
-        width: 58.333333%
-
-
-    .col-xs-8
-        width: 66.666667%
-
-
-    .col-xs-9
-        width: 75%
-
-
-    .col-xs-10
-        width: 83.333333%
-
-    .col-xs-11
-        width: 91.666667%
-
-
-    .col-xs-12
-        width: 100%

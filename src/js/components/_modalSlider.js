@@ -6,7 +6,7 @@ $(function() {
     const itemsCount = $(elem).find('.items').length;
     $(elem).attr('data-items', itemsCount);
   });
-  $('.sign-in-btn').click(function() {
+  $('.signIn-link').click(function() {
     $('.modalWindow').toggleClass('modalLogin');
   });
   $(document).on('click', function(hideLang) {
