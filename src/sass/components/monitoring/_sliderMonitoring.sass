@@ -1,106 +1,59 @@
-.monitoring-examples
+.monitoring
     padding-bottom: 87px
     background-color: #eaeff2
-
-
-// hero-ask
-.hero-ask
-    background-color: #dee6eb
-    padding: 38px 115px 60px 115px
-    border-top: 4px solid #ee8a00
-    position: relative
-    top: -90px
     +md
-        padding: 38px 22px
-        top: 0
-        margin-bottom: 80px
-    &__title
-        text-align: center
-        margin-bottom: 25px
-        +md
-            font-size: 20px
-    &__desc
-        // text-align: left
-        color: #396f8c
-        font-size: 14px
-        line-height: 22px
-        font-family: "GothamPro"
-
-.hero-ask__desc p
-    padding-bottom: 0px
-
-.hero-ask__desc p:last-child
-    padding-bottom: 0px
-
-.hero-ask__desc p:not(:first-child)
-    display: none
-
-.hero-ask__button
-    position: absolute
-    left: 50%
-    transform: translateX(-50%)
-    bottom: -32px
-
-.hero-ask__arrow
-    display: block
-
-.monitoring-slider
-    padding: 0 20px
+        padding-bottom: 50px
+        margin-top: 70px
+    &__slider
+        padding: 0 20px
     &__title
         margin-bottom: 40px
     &__content
             position: relative
-.slick-slide img
-    margin: 0 auto
+    & .slick-slide img
+        margin: 0 auto
+    &__btn
+        margin-top: 40px   
+    &__arrows_prev
+        position: absolute
+        left: -10px
+        z-index: 1
+        display: block
+        background-image: url(../img/slider-left.png)
+        background-repeat: no-repeat
+        width: 70px
+        height: 20px
+        top: calc(50% - 41px)
+        transform: translateY(-50%)
+        cursor: pointer
+    &__arrows_prev:hover
+        background-position: -70px 0px
+    &__arrows_next
+        position: absolute
+        right: -10px
+        z-index: 1
+        display: block
+        background-image: url(../img/slider-right.png)
+        background-repeat: no-repeat
+        width: 70px
+        height: 20px
+        top: 115px
+        transform: translateY(-50%)
+        cursor: pointer
+    &__arrows_next:hover
+        background-position: -70px 0px
 
-&.prev
-    position: absolute
-    left: -10px
-    z-index: 1
-    display: block
-    background-image: url(../img/slider-left.png)
-    background-repeat: no-repeat
-    width: 70px
-    height: 20px
-    top: calc(50% - 41px)
-    transform: translateY(-50%)
-    cursor: pointer
-
-&.prev:hover
-    background-position: -70px 0px
-
-&.next
-    position: absolute
-    right: -10px
-    z-index: 1
-    display: block
-    background-image: url(../img/slider-right.png)
-    background-repeat: no-repeat
-    width: 70px
-    height: 20px
-    top: 115px
-    transform: translateY(-50%)
-    cursor: pointer
-
-&.next:hover
-    background-position: -70px 0px
-
-.monitoring__item
+.monitoring-item
     // position: relative
     cursor: pointer
     &:hover .monitoring-item__title
         color: #ee8a00
-
-
-.monitoring-item__title
-    max-width: 222px
-    margin: 0 auto
-    text-align: center
-    margin-top: 38px
-    cursor: pointer
-    transition: 0.3s
-    &:hover
-        color: #ee8a00
-
-.monitoring-slider__btn
-    margin-top: 40px    
+    &__title
+        max-width: 222px
+        margin: 0 auto
+        text-align: center
+        margin-top: 38px
+        cursor: pointer
+        transition: 0.3s
+        &:hover
+            color: #ee8a00 

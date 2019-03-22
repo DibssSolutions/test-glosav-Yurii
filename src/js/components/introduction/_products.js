@@ -10,8 +10,8 @@ var prodSettings = {
   speed: 300,
   slidesToShow: 5,
   slidesToScroll: 1,
-  prevArrow: $('.prev'),
-  nextArrow: $('.next'),
+  prevArrow: $('.products-arrows__prev'),
+  nextArrow: $('.products-arrows__next'),
   responsive: [
     {
       breakpoint: 1024,

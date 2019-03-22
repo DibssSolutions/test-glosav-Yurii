@@ -70,25 +70,25 @@
 {# for directions #}
 
 {% macro directions(items) %}
-<div class="directions-block__item">
+<div class="directions__block">
   <div>
     {% if items.img %}
-    <img src="img/{{items.img}}" class="directions-block__img" alt="directions">
+    <img src="img/{{items.img}}" class="directions__img" alt="directions">
     {% endif %}
   </div>
   {% if items.title %}
-  <h2 class="directions-block__title title_md">{{items.title}}</h2>
+  <h2 class="directions__title title_md">{{items.title}}</h2>
   {% endif %}
   {% if items.desc %}
-  <p class="directions-block__desc">{{items.desc}}</p>
+  <p class="directions__desc">{{items.desc}}</p>
   {% endif %}
   {% if items.btn %}
-  <button class="directions-block__btn button_border-blue">{{items.btn}}</button>
+  <button class="directions__btn button_border-blue">{{items.btn}}</button>
   {% endif %}
-  <ul class="directions-block-list">
+  <ul class="directions__list">
     {% for item in items.list %}
     {% if items.list %}
-    <li class="directions-block-list__item">
+    <li class="directions__item">
       <span>{{ item }}</span>
     </li>
     {% endif %}

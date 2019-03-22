@@ -5,30 +5,34 @@
     margin-bottom: 50px
     &__title
         margin-bottom: 25px
-    &-slider
+    &__slider
         padding: 0 20px
-        &__content
-            position: relative
-    &-item
-        cursor: pointer
-        &:hover .products-item__title
-            color: #ee8a00
-        &__img
-            width: 173px
-            height: 173px
-            display: flex
-            align-items: center
-            background: #fff
-            border-radius: 50%
+    &__content
+        position: relative
+
+.products-block
+    cursor: pointer
+    &:hover .products-block__title
+        color: #ee8a00
+    &__img
+        width: 173px
+        height: 173px
+        display: flex
+        align-items: center
+        background: #fff
+        border-radius: 50%
+        margin: 0 auto
+        & img
             margin: 0 auto
-        &__title
-            transition: 0.3s
-            text-align: center
-            margin-top: 15px
-    & .products-arrows
-        &__prev
-            left: -30px
-            top: 85px
-        &__next
-            right: -30px
-            top: 85px
+    &__title
+        transition: 0.3s
+        text-align: center
+        margin-top: 15px
+
+.products-arrows
+    &__prev
+        left: -30px
+        top: 85px
+    &__next
+        right: -30px
+        top: 85px

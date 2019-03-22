@@ -1,3 +1,3 @@
-if (document.querySelector('.promo-bg')) {
-  $('footer').css('background', '#eaeff2');
+if (document.querySelector('.promo_bg')) {
+  $('body').css('background', '#eaeff2');
 }

@@ -17,7 +17,7 @@ $(window).resize(function() {
     owl.trigger('destroy.owl.carousel');
     $('.slider').toggleClass('d-block');
     $('.row').removeClass('slider');
-    $('.help').addClass('col-sm-6');
+    $('.slider__wrapper').addClass('col-sm-6');
   }
 });
 $('.slide-system-integration-hero__text').find('div.close-button-modal').remove();

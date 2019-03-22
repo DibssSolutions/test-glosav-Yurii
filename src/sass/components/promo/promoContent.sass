@@ -1,6 +1,5 @@
-.promo-bg
+.promo_bg
     background-color: #eaeff2
-    font-family: "GothamPro"
 
 .promo-wrapper
     padding: 0px 20px
@@ -8,43 +7,43 @@
     +md
         &:first-child
             padding-top: 30px
-    & .promo-block
-        display: flex
-        justify-content: space-between
-        align-items: center
-        padding-bottom: 36px
+.promo
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-bottom: 36px
+    +md
+        flex-direction: column
+    &__img
+        padding-right: 88px
+        +md
+            padding: 0 0 38px 0
+    &__img img
+        display: block
+        +md
+            width: 100%
+            margin: auto
+    &__title
+        margin-bottom: 30px
+        +md
+            font-size: 20px
+            font-weight: 500
+    &__desc p
+        color: #396f8c
+        font-size: 14px
+        font-weight: 400
+        line-height: 22px
+
+.promo-wrapper:nth-child(even)
+    .promo  
+        flex-direction: row-reverse
         +md
             flex-direction: column
-        &__img
-            padding-right: 88px
-            +md
-                padding: 0 0 38px 0
-        & img
-            display: block
-            +md
-                width: 100%
-                margin: auto
-        &__desc 
-            & h2
-                margin-bottom: 30px
-                +md
-                    font-size: 20px
-                    font-weight: 500
-            & p
-                color: #396f8c
-                font-size: 14px
-                font-weight: 400
-                line-height: 22px
-    &:nth-child(even)
-        .promo-block  
-            flex-direction: row-reverse
-            +md
-                flex-direction: column
-        & .promo-block__img
-            padding-right: 0
-            padding-left: 88px
-            +md
-                padding: 0 0 38px 0
+    &__img
+        padding-right: 0
+        padding-left: 88px
+        +md
+            padding: 0 0 38px 0
 
 .promo-video
     position: relative

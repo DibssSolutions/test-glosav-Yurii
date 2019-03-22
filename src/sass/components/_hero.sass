@@ -14,87 +14,6 @@
         left: 0
         transform: translate(0%, 0%)
 
-.slider__img img
-    // width: 360px
-    // margin: 0 auto
-    border: 2px solid #53788b
-    padding: 10px
-    box-sizing: border-box
-    border-radius: 50%
-    transition: 0.5s
-    +md
-        padding: 5px
-
-.slider__img img:hover
-    border: 2px solid transparent
-    box-sizing: border-box
-
-.blur
-    box-sizing: border-box
-    filter: blur(2px)
-    transition: 0.5s
-    +md
-        filter: blur(0)
-
-.help
-    position: relative
-    width: 560px
-    padding: 0 90px
-    +md
-        margin-bottom: 30px
-
-
-.slider__img
-    position: relative
-    transition: 0.5s
-.slider__img:before
-    content: url(../img/border-line-top.svg)
-    position: absolute
-    top: 50%;
-    left: 50%;
-    transform: translate(-41%,-47%);
-    visibility: hidden
-    opacity: 0
-    transition: 0.5s
-    // z-index: -1
-
-.slider__img:after
-    content: url(../img/border-line-bottom.svg)
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-54%,45%)
-    visibility: hidden
-    transition: 0.5s
-    opacity: 0
-    // z-index: -1
-
-.slider__img:hover:before
-    content: url(../img/border-line-top.svg)
-    visibility: visible
-    opacity: 1
-    transition: 0.5s
-    // z-index: -1
-    +md
-        display: none
-
-.slider__img:hover:after
-    content: url(../img/border-line-bottom.svg)
-    visibility: visible
-    transition: 0.5s
-    opacity: 1
-    // z-index: -1
-    +md
-        display: none
-
-.slider__img img
-    cursor: pointer
-    +md
-        max-width: 100%
-        margin: auto
-        height: auto
-        width: auto
-
 .slider
     opacity: 0
     visibility: hidden
@@ -105,25 +24,89 @@
         visibility: visible
     .owl-stage-outer
         overflow: visible
+    &__wrapper
+        position: relative
+        width: 560px
+        padding: 0 90px
+        +md
+            margin-bottom: 30px
+            padding: 0 20px
+    &__item
+        transition: 0.9s
+        cursor: pointer
+        &:hover .slider__title
+            color: #f58220
+    &__img
+        position: relative
+        transition: 0.5s
+        cursor: pointer
+    &__img img
+        border: 2px solid #53788b
+        padding: 10px
+        box-sizing: border-box
+        border-radius: 50%
+        transition: 0.5s
+        cursor: pointer
+        +md
+            max-width: 100%
+            margin: auto
+            height: auto
+            width: auto
+            padding: 5px
+    &__img img:hover
+        border: 2px solid transparent
+        box-sizing: border-box
+    &__img:before
+        content: url(../img/border-line-top.svg)
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-41%,-47%)
+        visibility: hidden
+        opacity: 0
+        transition: 0.5s
+    &__img:after
+        content: url(../img/border-line-bottom.svg)
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-54%,45%)
+        visibility: hidden
+        transition: 0.5s
+        opacity: 0
+    &__img:hover:before
+        content: url(../img/border-line-top.svg)
+        visibility: visible
+        opacity: 1
+        transition: 0.5s
+        +md
+            display: none
+    &__img:hover:after
+        content: url(../img/border-line-bottom.svg)
+        visibility: visible
+        transition: 0.5s
+        opacity: 1
+        +md
+            display: none
+    &__title
+        padding-top: 45px
+        text-align: center
+        color: #396f8c
+        font-size: 20px
+        font-weight: 500
+        text-transform: uppercase
+        letter-spacing: 0.8px
+        transition: 0.5s
+        +md
+            font-size: 11px
+            letter-spacing: 0.56px
+            padding-top: 15px
+            max-width: 100px
+            margin: 0 auto
 
-.slider
-    // +md
-    //     width: auto
-.transiton
-    transition: 0.5s
-
-.slider__title
-    padding-top: 45px
-    text-align: center
-    color: #396f8c
-    font-size: 20px
-    font-weight: 500
-    text-transform: uppercase
-    letter-spacing: 0.8px
-    transition: 0.5s
+.blur
+    box-sizing: border-box
+    filter: blur(2px)
+    transition: 0.9s
     +md
-        font-size: 11px
-        letter-spacing: 0.56px
-        padding-top: 15px
-        max-width: 100px
-        margin: 0 auto
+        filter: blur(0)
